@@ -1,0 +1,18 @@
+.navbarContainer {
+  width: 100vw;
+  border-bottom: 1px solid gray;
+
+  margin-bottom: 1rem;
+  //   background-color: red;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+
+    li {
+      margin-right: 2rem;
+
+      list-style: none;
+    }
+  }
+}
