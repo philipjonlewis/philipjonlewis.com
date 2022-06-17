@@ -31,11 +31,11 @@ const Projects: NextPage = (children) => {
       {projectList.length >= 1 &&
         projects.map((project: any) => {
           return (
-            <div key={project.id}>
+            <Link key={project.id} href={`/projects/software/${project.id}`}>
               <a>
                 <h3>{project.name}</h3>
               </a>
-            </div>
+            </Link>
           );
         })}
     </div>

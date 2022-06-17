@@ -5,13 +5,9 @@ import Image from "next/image";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-const Navbar = ({ title }) => {
+const Navbar = () => {
   const router = useRouter();
   const { asPath } = useRouter();
-
-  function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
 
   return (
     <>
