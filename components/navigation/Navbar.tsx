@@ -19,7 +19,9 @@ const Navbar = () => {
       <nav className={styles.navbarContainer}>
         <Image src="/logo.png" width={128} height={77} alt="logo" />
 
-        <h1>Navbar</h1>
+        <h1 className="text-3xl font-bold underline bg-red-300 text-blue-400">
+          Navbar
+        </h1>
 
         <ul>
           <li>
