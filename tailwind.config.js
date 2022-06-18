@@ -6,7 +6,11 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "dark-bg": "#0f0f0f",
+      },
+    },
     container: {
       center: true,
     },
