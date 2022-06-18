@@ -12,9 +12,8 @@
     @apply text-white bg-indigo-500;
   }
 
-  
-  .btn{
-    @apply inline-block px-5 py-3 rounded-lg hover:bg-indigo-600 transition duration-300 shadow-lg bg-indigo-500 text-white capitalize tracking-wider font-semibold text-sm sm:text-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 whitespace-nowrap
+  .btn {
+    @apply inline-block px-5 py-3 rounded-lg hover:bg-indigo-600 transition duration-300 shadow-lg bg-indigo-500 text-white capitalize tracking-wider font-semibold text-sm sm:text-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 whitespace-nowrap;
   }
 }
 
@@ -27,10 +26,24 @@ body {
 }
 
 a {
-  color: inherit;
+  // color: inherit;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.nav-link {
+  @apply py-2 px-6 rounded-md hover:bg-slate-700;
+}
+
+// .nav-link {
+//   @apply block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700
+//   bg-red-500;
+// }
+
+.active-navlink {
+  @extend .nav-link;
+  @apply text-blue-400 dark:bg-gray-700;
 }

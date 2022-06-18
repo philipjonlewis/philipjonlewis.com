@@ -13,12 +13,14 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen mx-auto max-w-2xl flex flex-col">
+      <div className="min-h-screen lg:container mx-auto max-w-2xl flex flex-col">
+
         <Header />
-        {/* <Navbar /> */}
+        <Navbar />
         <main className="flex-grow container mx-auto px-4 sm:px-6">
           {children}
         </main>
+
         <Footer />
       </div>
     </ThemeProvider>
