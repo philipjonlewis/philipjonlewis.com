@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import type { NextPage } from "next";
 import { annotate, annotationGroup } from "rough-notation";
-import SvgBackground from "../components/branding/SvgBackground";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-import { BsArrowUpRightSquare } from "react-icons/Bs";
+
+import { ExternalLinkIcon } from "@heroicons/react/solid";
 
 const Home: NextPage = () => {
   const myName = useRef() as any;
@@ -14,6 +14,7 @@ const Home: NextPage = () => {
   const myEngineer = useRef() as any;
   const productDesign = useRef();
   const openPosition = useRef() as any;
+  const circleButton = useRef() as any;
 
   useEffect(() => {
     // const a1 = annotate(myName.current, {
@@ -23,20 +24,20 @@ const Home: NextPage = () => {
     //   strokeWidth: 1,
     // });
     const a2 = annotate(myArchitect.current, {
-      type: "underline",
+      type: "crossed-off",
       // brackets: ["top", "bottom"],
       // padding: 1,
       // color: "green",
       strokeWidth: 1,
     });
     const a3 = annotate(myDesigner.current, {
-      type: "underline",
+      type: "circle",
       // padding: 5,
       // color: "yellow",
       strokeWidth: 1,
     });
     const a4 = annotate(myEngineer.current, {
-      type: "underline",
+      type: "box",
       // color: "blue",
       strokeWidth: 1,
     });
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
       type: "bracket",
       brackets: ["left", "right"],
       // padding: 1,
-      // color: "#FC2E20",
+      // color: "darkorange",
       strokeWidth: 1,
     });
     const a6 = annotate(productDesign.current, {
@@ -56,14 +57,22 @@ const Home: NextPage = () => {
       strokeWidth: 1,
     });
     const a7 = annotate(myName.current, {
-      type: "box",
+      type: "bracket",
+      brackets: ["top", "bottom"],
+      padding: 2,
+      // color: "green",
+      strokeWidth: 1,
+    });
+    const a8 = annotate(circleButton.current, {
+      type: "circle",
       // brackets: ["left", "right"],
-      // padding: 1,
+      padding: 20,
       // color: "green",
       strokeWidth: 1,
     });
 
-    const ag = annotationGroup([a2, a3, a4, a6, a7, a5]);
+    const ag = annotationGroup([a2, a3, a4, a6, a7, a5, a8]);
+    // const ag = annotationGroup([a8]);
 
     setTimeout(() => {
       ag.show();
@@ -89,12 +98,9 @@ const Home: NextPage = () => {
           <p className="text-xl md:text-3xl font-sans font-semibold">
             I&#39;m an <span ref={myArchitect}>architect</span>, a{" "}
             <span ref={myDesigner}>designer</span>, and a{" "}
-            <span ref={myEngineer}>software engineer</span>
-            <br />
-            focused on digital <span ref={productDesign}>
-              product design{" "}
-            </span>{" "}
-            and development.{" "}
+            <span ref={myEngineer}>software engineer</span> <br /> focused on
+            digital <span ref={productDesign}>product design </span> and
+            development.{" "}
           </p>
         </div>
 
@@ -106,9 +112,9 @@ const Home: NextPage = () => {
         </div>
         <div className="mb-12 flex justify-center items-center h-6 w-fit text-xs cursor-pointer text-orange-700 dark:text-blue-700">
           <Link href="/about">
-            <div className="flex">
+            <div className="flex justify-center items-center">
               <p>Read more about me</p>
-              <BsArrowUpRightSquare size={16} className="ml-2" />
+              <ExternalLinkIcon className="h-4 w-4 ml-2 text-orange-700 dark:text-blue-700" />
             </div>
           </Link>
         </div>
@@ -120,7 +126,8 @@ const Home: NextPage = () => {
           </p>
         </div>
         <div
-          className="ml-auto sm:ml-0 w-fit p-4 text-sm h-12 flex justify-center items-center   rounded-md cursor-pointer border
+          ref={circleButton}
+          className="ml-auto sm:ml-0 w-fit py-4 px-8 text-sm h-12 flex justify-center items-center   rounded-md cursor-pointer border
          border-slate-800 
          bg-slate-800 
          text-white

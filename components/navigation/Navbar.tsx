@@ -4,9 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
-import { FiGithub, FiTwitter } from "react-icons/fi";
-import { RiMediumLine } from "react-icons/ri";
-import { AiOutlineLinkedin } from "react-icons/ai";
+import { GitHubIcon, LinkedInIcon, TwitterIcon } from "../branding";
 
 const Navbar = () => {
   const router = useRouter();
@@ -59,7 +57,7 @@ const Navbar = () => {
             className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
             rel="noreferrer"
           >
-            <FiGithub size={22} />
+            <GitHubIcon />
           </motion.a>
 
           <motion.a
@@ -69,7 +67,7 @@ const Navbar = () => {
             className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
             rel="noreferrer"
           >
-            <AiOutlineLinkedin size={24} />
+            <LinkedInIcon />
           </motion.a>
           <motion.a
             variants={item}
@@ -78,16 +76,7 @@ const Navbar = () => {
             className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
             rel="noreferrer"
           >
-            <FiTwitter size={22} />
-          </motion.a>
-          <motion.a
-            variants={item}
-            target="_blank"
-            href="https://medium.com/@philipjonlewis"
-            className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
-            rel="noreferrer"
-          >
-            <RiMediumLine size={24} />
+            <TwitterIcon />
           </motion.a>
         </motion.div>
 
