@@ -1,17 +1,12 @@
-
-
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
-import styles from "./Navbar.module.scss";
-import Image from "next/image";
-import Head from "next/head";
+
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { annotate, annotationGroup } from "rough-notation";
-import { DownloadIcon } from "@heroicons/react/solid";
-import { FiGithub, FiTwitter } from "react-icons/Fi";
-import { RiMediumLine } from "react-icons/Ri";
-import { AiOutlineLinkedin, AiOutlineMedium } from "react-icons/Ai";
+
+import { FiGithub, FiTwitter } from "react-icons/fi";
+import { RiMediumLine } from "react-icons/ri";
+import { AiOutlineLinkedin } from "react-icons/ai";
 
 const Navbar = () => {
   const router = useRouter();
