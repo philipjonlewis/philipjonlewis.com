@@ -59,7 +59,7 @@ const Navbar = () => {
             variants={item}
             target="_blank"
             href="https://github.com/philipjonlewis"
-            className="mr-8 hover:text-blue-500 cursor-pointer"
+            className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
             rel="noreferrer"
           >
             <FiGithub size={22} />
@@ -69,7 +69,7 @@ const Navbar = () => {
             variants={item}
             target="_blank"
             href="https://www.linkedin.com/in/philipjonlewis/"
-            className="mr-8 hover:text-blue-500 cursor-pointer"
+            className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
             rel="noreferrer"
           >
             <AiOutlineLinkedin size={24} />
@@ -78,7 +78,7 @@ const Navbar = () => {
             variants={item}
             target="_blank"
             href="https://twitter.com/__jonlewis"
-            className="mr-8 hover:text-blue-500 cursor-pointer"
+            className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
             rel="noreferrer"
           >
             <FiTwitter size={22} />
@@ -87,7 +87,7 @@ const Navbar = () => {
             variants={item}
             target="_blank"
             href="https://medium.com/@philipjonlewis"
-            className="mr-8 hover:text-blue-500 cursor-pointer"
+            className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
             rel="noreferrer"
           >
             <RiMediumLine size={24} />
