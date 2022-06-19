@@ -19,7 +19,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
         <main className="container">{children}</main>
 
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </ThemeProvider>
   );

@@ -18,7 +18,7 @@ const Logo = () => {
         variants={logoVariants}
         className="text-sm font-semibold cursor-pointer "
       >
-        Philip Jon Lewis
+        Philip Jon Echavez Lewis
       </motion.span>
     </Link>
   );

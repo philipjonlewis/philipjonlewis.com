@@ -28,7 +28,7 @@ const Header = () => {
     } else {
       return (
         <MoonIcon
-          className="w-10 h-6 text-gray-900 "
+          className="w-10 h-6 text-blue-700 "
           role="button"
           onClick={() => setTheme("dark")}
         />

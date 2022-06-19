@@ -44,21 +44,22 @@ const Home: NextPage = () => {
           hidden: { opacity: 0 },
           visible: { opacity: 1, transition: { delay: 0.5 } },
         }}
-        className="  w-1/2 h-2/3 flex flex-col justify-center align-start  "
+        className=" h-2/3 flex flex-col justify-center align-start  "
       >
         <div className="mb-4">
           <p className="text-3xl font-sans font-semibold">
             I&#39;m an <span ref={myArchitect}> architect</span>, a{" "}
             <span ref={myDesigner}> designer</span>, and a{" "}
             <span ref={myEngineer}> software engineer</span>
+            <br />
             focused on digital product design and development.
           </p>
         </div>
 
         <div className="mb-4">
           <span className="text-base">
-            My name is <span ref={myName}> Philip Lewis</span> and I like
-            building great things.
+            My name is <span ref={myName}> Philip Lewis</span> and I love
+            challenges and building great things.
           </span>
         </div>
 

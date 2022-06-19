@@ -1,11 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="px-4 sm:px-6 py-6 mt-24">
-      <div className="text-center text-sm text-gray-500">
-        <span className="dark:text-gray-100 text-gray-900 font-bold text-lg mr-2">
-          {" "}
-          Philip Jon E Lewis
-        </span>{" "}
+    <footer className="fixed bottom-0  w-full h-16">
+      <div className="text-center text-sm container  h-full  flex justify-between items-center">
+        <span className=" text-sm font-normal"> philipjonlewis@gmail.com </span>{" "}
         &copy; {new Date().getFullYear()} All Rights Reserved
       </div>
     </footer>

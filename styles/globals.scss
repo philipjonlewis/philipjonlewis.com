@@ -36,7 +36,7 @@ a {
 }
 
 .nav-link {
-  @apply text-sm font-medium text-slate-700 dark:text-slate-50 py-3 px-6 rounded-md hover:bg-slate-50 dark:hover:bg-gray-700 cursor-pointer;
+  @apply text-sm font-medium text-slate-700 dark:text-slate-50 py-3 px-6  hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer hover:rounded-sm;
 }
 
 // .nav-link {
@@ -46,7 +46,7 @@ a {
 
 .active-navlink {
   @extend .nav-link;
-  @apply text-blue-600  dark:bg-gray-800;
+  @apply text-orange-600 dark:text-blue-500;
 }
 
 // html,
@@ -68,5 +68,5 @@ a {
 
 //   // background-color: rgba($color: #157ab8, $alpha: 0.2);
 //   backdrop-filter: blur(2px);
-//   backdrop-filter: invert(100%) blur(2px);
+//   backdrop-filter:  blur(2px)s;
 // }

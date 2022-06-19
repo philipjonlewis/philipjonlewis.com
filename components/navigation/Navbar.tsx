@@ -6,6 +6,10 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { annotate, annotationGroup } from "rough-notation";
+import { DownloadIcon } from "@heroicons/react/solid";
+import { FiGithub, FiTwitter } from "react-icons/Fi";
+import { RiMediumLine } from "react-icons/Ri";
+import { AiOutlineLinkedin, AiOutlineMedium } from "react-icons/Ai";
 
 const Navbar = () => {
   const router = useRouter();
@@ -44,49 +48,49 @@ const Navbar = () => {
 
   return (
     <nav className=" px-2  h-16 rounded flex">
-      <div className="container flex flex-wrap justify-between items-center mx-auto ">
+      <div className="container flex flex-wrap justify-between items-center mx-auto  ">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={list}
-          className="text-xs"
+          className="text-xs h-full flex justify-center items-center"
         >
           <motion.a
             variants={item}
             target="_blank"
             href="https://github.com/philipjonlewis"
-            className="mr-8 dark:hover:text-blue-500"
+            className="mr-8 hover:text-blue-500 cursor-pointer"
             rel="noreferrer"
           >
-            GitHub
+            <FiGithub size={22} />
           </motion.a>
 
           <motion.a
             variants={item}
             target="_blank"
             href="https://www.linkedin.com/in/philipjonlewis/"
-            className="mr-8 dark:hover:text-blue-500"
+            className="mr-8 hover:text-blue-500 cursor-pointer"
             rel="noreferrer"
           >
-            LinkedIn
+            <AiOutlineLinkedin size={24} />
           </motion.a>
           <motion.a
             variants={item}
             target="_blank"
             href="https://twitter.com/__jonlewis"
-            className="mr-8 dark:hover:text-blue-500"
+            className="mr-8 hover:text-blue-500 cursor-pointer"
             rel="noreferrer"
           >
-            Twitter
+            <FiTwitter size={22} />
           </motion.a>
           <motion.a
             variants={item}
             target="_blank"
             href="https://medium.com/@philipjonlewis"
-            className="mr-8 dark:hover:text-blue-500"
+            className="mr-8 hover:text-blue-500 cursor-pointer"
             rel="noreferrer"
           >
-            Medium
+            <RiMediumLine size={24} />
           </motion.a>
         </motion.div>
 
@@ -148,6 +152,14 @@ const Navbar = () => {
               Contact
             </motion.a>
           </Link>
+          {/* <motion.a
+            href="#"
+            // download
+            variants={item}
+            className="text-sm font-medium py-3 px-6 cursor-pointer border-[1px] rounded-sm border-blue-700 text-blue-700 dark:text-yellow-500 dark:border-yellow-500 hover:text-orange-500 hover:border-orange-500 dark:hover:bg-orange-800"
+          >
+            Resume
+          </motion.a> */}
         </motion.div>
       </div>
     </nav>
