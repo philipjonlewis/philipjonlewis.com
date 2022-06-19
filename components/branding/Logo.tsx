@@ -1,15 +1,25 @@
 import { LightningBoltIcon } from "@heroicons/react/solid";
 import Link from "next/link";
+import { annotate, annotationGroup } from "rough-notation";
+import { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Logo = () => {
+  const logoVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { delay: 0.3 } },
+  };
+
   return (
     <Link href="/">
-      <a className="my-2 flex items-center space-x-1 text-indigo-500">
-        <LightningBoltIcon className="h-8 w-8 flex-shrink-0 mr-3" />
-        <span className="font-bold text-3xl font-sans tracking-tight whitespace-nowrap">
-          Philip Jon Lewis
-        </span>
-      </a>
+      <motion.span
+        initial="hidden"
+        animate="visible"
+        variants={logoVariants}
+        className="text-sm font-semibold cursor-pointer "
+      >
+        Philip Jon Lewis
+      </motion.span>
     </Link>
   );
 };

@@ -6,18 +6,20 @@ import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import Meta from "./Meta";
 import CustomCursor from "../branding/CustomCursor";
+import { motion } from "framer-motion";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <Meta />
       <div className="min-h-screen min-w-screen flex flex-col">
         <Header />
         <Navbar />
-        <main className="flex-grow container">{children}</main>
 
-        <Footer />
+        <main className="container">{children}</main>
+
+        {/* <Footer /> */}
       </div>
     </ThemeProvider>
   );
