@@ -47,7 +47,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" px-2  h-16 rounded flex">
+    <nav className="hidden md:flex px-2  h-16 rounded ">
       <div className="container flex flex-wrap justify-between items-center mx-auto  ">
         <motion.div
           initial="hidden"

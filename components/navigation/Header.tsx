@@ -37,7 +37,7 @@ const Header = () => {
   };
 
   return (
-    <header className="h-14 container flex justify-between items-center ">
+    <header className="h-14 container flex justify-between items-center px-4 md:px-0 ">
       <Logo />
       {renderThemeChanger()}
     </header>

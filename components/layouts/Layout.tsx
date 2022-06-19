@@ -13,7 +13,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
     <ThemeProvider enableSystem={true} attribute="class">
       {/* <CustomCursor /> */}
       <Meta />
-      <div className="min-h-screen min-w-screen flex flex-col">
+      <div className=" ">
         <Header />
         <Navbar />
 
