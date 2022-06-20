@@ -31,43 +31,46 @@ const About: NextPage = () => {
           </p>
           <br />
           <p>
-            I started my own architecture design studio in 2017. Completed
-            projects under my practice range from commercial, office interiors,
-            residential & planning projects. Services provided were from, but
-            not limited to, architectural design to project management.
+            Completed projects under my architectural practice range from
+            commercial, office interiors, residential & planning projects.
+            Services provided were from, but not limited to, architectural
+            design to project management.
           </p>
           <br />
+
           <p>
-            After practicing for 5 years, I decided to move forward from my
-            studio and challenge myself even more. Diving into tech was
-            definitely challenging but not impossible. I started learning
-            programming a year ago and have been building projects ever since.{" "}
-            <a
-              className="text-red-700 dark:text-teal-300"
-              href="https://www.taptaptask.com"
-            >
-              taptaptask
-            </a>
-            , a phase-based project & task management app &{" "}
-            <a
-              className="text-red-700 dark:text-teal-300"
-              href="https://www.archestimator.com"
-            >
-              archestimator
-            </a>
-            , a cost estimator for architects.
+            I have built myself to be a strategic and organized leader. In my
+            projects, I take pride in being thorough in from the planning stage
+            up to execution and documentation.
           </p>
+
           <br />
-          <p>
-            From my background, I have built myself to be a strategic and
-            organized person. In any project, I take pride in being thorough in
-            planning to execution and documentation.
-          </p>
-          <br />
-          <p>
-            I&#39;m currently looking for a software engineering position in the
-            fields of analytics, healthcare, education or finance.
-          </p>
+          <div>
+            <p>
+              I mainly work with javascript but should the need to learn and use
+              additional languages and/or technologies arise, I wouldnt hesitate
+              to do so.
+            </p>
+
+            <br />
+            <p>
+              I'm currently building two apps.{" "}
+              <a
+                className="text-red-700 dark:text-teal-300"
+                href="https://www.taptaptask.com"
+              >
+                taptaptask
+              </a>
+              , a phase-based project & task management app and{" "}
+              <a
+                className="text-red-700 dark:text-teal-300"
+                href="https://www.archestimator.com"
+              >
+                archestimator
+              </a>
+              , a cost estimator for architects.
+            </p>
+          </div>
         </div>
       </motion.div>
 
@@ -76,7 +79,7 @@ const About: NextPage = () => {
         animate="visible"
         transition={{ delay: 0.6 }}
         variants={segment}
-        className="px-4 md:p-0 md:w-fit md:px-6 md:border-r-[1px]"
+        className="px-4 md:p-0 md:pl-4 md:w-fit md:pr-12 md:border-r-[1px]"
       >
         <div className="text-2xl font-bold mb-4  text-slate-600 dark:text-slate-200">
           <p>Tech Stack</p>
@@ -149,42 +152,6 @@ const About: NextPage = () => {
       </motion.div>
 
       {/* tech stakc container */}
-
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        transition={{ delay: 0.9 }}
-        variants={segment}
-        className="px-4 md:px-6 md:w-fit md:border-r-[1px] md:mr-4 flex-1"
-      >
-        <div className="mb-4 border-b-[1px]">
-          <div className="text-lg font-normal mb-4 text-red-600 dark:text-indigo-400">
-            <p>Design</p>
-          </div>
-
-          <div className="text-sm mb-4 ">
-            <p>I have always believed that design is an</p>
-          </div>
-        </div>
-        <div className="mb-4 border-b-[1px]">
-          <div className="text-lg font-normal mb-4 text-red-600 dark:text-indigo-400">
-            <p>Egineering</p>
-          </div>
-
-          <div className="text-sm mb-4 ">
-            <p>I have always believed that design is an</p>
-          </div>
-        </div>
-        <div className="mb-4 border-b-[1px]">
-          <div className="text-lg font-normal mb-4 text-red-600 dark:text-indigo-400">
-            <p>Leadership</p>
-          </div>
-
-          <div className="text-sm mb-4 ">
-            <p>I have always believed that design is an</p>
-          </div>
-        </div>
-      </motion.div>
     </div>
   );
 };
