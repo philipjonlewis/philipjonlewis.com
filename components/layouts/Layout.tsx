@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import Meta from "./Meta";
 import CustomCursor from "../branding/CustomCursor";
 import { motion } from "framer-motion";
+import MobileNavbar from "../navigation/MobileNavbar";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
@@ -19,6 +20,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
         <main className="container">{children}</main>
 
+        <MobileNavbar />
         <Footer />
       </div>
     </ThemeProvider>

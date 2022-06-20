@@ -42,13 +42,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="hidden md:flex px-2  h-16 rounded ">
-      <div className="container flex flex-wrap justify-between items-center mx-auto  ">
+    <nav className="h-12">
+      <div className="h-full container flex justify-between items-center">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={list}
-          className="text-xs h-full flex justify-center items-center"
+          className="flex px-4 md:px-0"
         >
           <motion.a
             variants={item}
@@ -81,7 +81,7 @@ const Navbar = () => {
         </motion.div>
 
         <motion.div
-          className="flex items-center justify-center h-full gap-2 ml-auto"
+          className="hidden md:flex"
           initial="hidden"
           animate="visible"
           variants={list}

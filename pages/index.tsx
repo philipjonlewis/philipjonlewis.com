@@ -4,7 +4,6 @@ import { annotate, annotationGroup } from "rough-notation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 
 const Home: NextPage = () => {
@@ -24,8 +23,8 @@ const Home: NextPage = () => {
     //   strokeWidth: 1,
     // });
     const a2 = annotate(myArchitect.current, {
-      type: "crossed-off",
-      // brackets: ["top", "bottom"],
+      type: "bracket",
+      brackets: ["left", "right"],
       // padding: 1,
       // color: "green",
       strokeWidth: 1,
@@ -42,11 +41,11 @@ const Home: NextPage = () => {
       strokeWidth: 1,
     });
     const a5 = annotate(openPosition.current, {
-      // type: "highlight",
-      type: "bracket",
-      brackets: ["left", "right"],
+      type: "highlight",
+      // type: "bracket",
+      // brackets: ["left", "right"],
       // padding: 1,
-      // color: "darkorange",
+      color: "darkorange",
       strokeWidth: 1,
     });
     const a6 = annotate(productDesign.current, {
@@ -71,7 +70,7 @@ const Home: NextPage = () => {
       strokeWidth: 1,
     });
 
-    const ag = annotationGroup([a2, a3, a4, a6, a7, a5, a8]);
+    const ag = annotationGroup([a2, a3, a4, a6, a7, a5]);
     // const ag = annotationGroup([a8]);
 
     setTimeout(() => {
@@ -110,19 +109,21 @@ const Home: NextPage = () => {
             challenges and building great things.
           </span>
         </div>
-        <div className="mb-12 flex justify-center items-center h-6 w-fit text-xs cursor-pointer text-orange-700 dark:text-blue-700">
+        <div className="mb-12 flex justify-center items-center h-6 w-fit text-xs cursor-pointer text-orange-700 dark:text-blue-500">
           <Link href="/about">
             <div className="flex justify-center items-center">
               <p>Read more about me</p>
-              <ExternalLinkIcon className="h-4 w-4 ml-2 text-orange-700 dark:text-blue-700" />
+              <ExternalLinkIcon className="h-4 w-4 ml-2 text-orange-700 dark:text-blue-500" />
             </div>
           </Link>
         </div>
 
         <div className="mb-12 md:mb-6 w-fit">
-          <p className="text-sm " ref={openPosition}>
-            I&#39;m currently looking for a web development role in the fields
-            of construction, healthcare, education and finance.
+          <p
+            className="text-sm font-semibold dark:text-slate-50"
+            ref={openPosition}
+          >
+            I&#39;m currently looking for a software engineering position in the fields of analytics, healthcare, education or finance.
           </p>
         </div>
         <div
@@ -137,8 +138,8 @@ const Home: NextPage = () => {
 
 
 
-dark:bg-white
-dark:text-slate-800
+          dark:bg-white
+        dark:text-slate-800
 
          dark:hover:bg-transparent
          dark:hover:text-white 
