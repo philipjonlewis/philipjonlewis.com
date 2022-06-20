@@ -25,14 +25,14 @@ const About: NextPage = () => {
           </p>
           <br />
           <p>
-            I'm an architect, a designer and a self-taught software engineer
-            based in manila. I'm motivated by meaningful challenges and inspired
-            by building technology that helps people.
+            I&#39;m an architect, a designer and a self-taught software engineer
+            based in manila. I&#39;m motivated by meaningful challenges and
+            inspired by building technology that helps people.
           </p>
           <br />
           <p>
             Completed projects under my architectural practice range from
-            commercial, office interiors, residential & planning projects.
+            commercial, office interiors, residential &#x26; planning projects.
             Services provided were from, but not limited to, architectural
             design to project management.
           </p>
@@ -54,14 +54,14 @@ const About: NextPage = () => {
 
             <br />
             <p>
-              I'm currently building two apps.{" "}
+              I&#39;m currently building two apps.{" "}
               <a
                 className="text-red-700 dark:text-teal-300"
                 href="https://www.taptaptask.com"
               >
                 taptaptask
               </a>
-              , a phase-based project & task management app and{" "}
+              , a phase-based project &#x26; task management app and{" "}
               <a
                 className="text-red-700 dark:text-teal-300"
                 href="https://www.archestimator.com"
