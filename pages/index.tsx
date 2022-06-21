@@ -4,7 +4,7 @@ import { annotate, annotationGroup } from "rough-notation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-import { ExternalLinkIcon } from "@heroicons/react/solid";
+import { ExternalLinkIcon,ArrowRightIcon } from "@heroicons/react/solid";
 
 const Home: NextPage = () => {
   const myName = useRef() as any;
@@ -113,7 +113,7 @@ const Home: NextPage = () => {
           <Link href="/about">
             <div className="flex justify-center items-center">
               <p>Read more about me</p>
-              <ExternalLinkIcon className="h-4 w-4 ml-2 text-orange-700 dark:text-blue-500" />
+              <ArrowRightIcon className="h-4 w-4 ml-2 text-orange-700 dark:text-blue-500" />
             </div>
           </Link>
         </div>
