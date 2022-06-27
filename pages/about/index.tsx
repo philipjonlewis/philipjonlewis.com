@@ -77,15 +77,15 @@ const About: NextPage = () => {
           <br />
           <p>
             I&#39;m currently building two apps.{" "}
-            <div className="text-orange-700 dark:text-blue-500 inline-block">
+            <span className="text-orange-700 dark:text-blue-500 inline-block">
               <a href="https://www.taptaptask.com">taptaptask</a>
               <ExternalLinkIcon className="h-4 w-4 ml-1 inline-block " />
-            </div>
+            </span>
             , a phase-based project &#x26; task management app and{" "}
-            <div className="text-orange-700 dark:text-blue-500 inline-block">
+            <span className="text-orange-700 dark:text-blue-500 inline-block">
               <a href="https://www.archestimator.com">archestimator</a>
               <ExternalLinkIcon className="h-4 w-4 ml-1 inline-block " />
-            </div>
+            </span>
             , a cost estimator for architects.
           </p>
         </div>
