@@ -7,13 +7,15 @@ import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { GitHubIcon } from "../../components/branding";
 import Image from "next/image";
 
+import { projectContent } from "./projectList";
+
 const Projects: NextPage = () => {
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.5,
       },
     },
   };
@@ -26,36 +28,6 @@ const Projects: NextPage = () => {
       transition: { type: "spring" },
     },
   };
-
-  const projectContent = [
-    {
-      projectId: 1,
-      projectName: "taptaptask",
-      projectDescription:
-        "taptaptask is a task management tool for phase-based projects.",
-      techStack: [
-        "React",
-        "Redux Toolkit",
-        "RTK Query",
-        "Node",
-        "Express",
-        "MongoDB",
-        "Mongoose",
-        "Scss",
-        "Vite",
-      ],
-      gitHubLinks: [
-        {
-          name: "Front-End",
-          link: "https://www.github.com/_jonlewis",
-        },
-        {
-          name: "Back-End",
-          link: "https://www.github.com/_jonlewis",
-        },
-      ],
-    },
-  ];
 
   return (
     <motion.div className="mt-10">
@@ -72,6 +44,8 @@ const Projects: NextPage = () => {
             projectDescription,
             techStack,
             gitHubLinks,
+            siteLink,
+            imageLink,
           } = project;
           return (
             <motion.div
@@ -81,19 +55,20 @@ const Projects: NextPage = () => {
             >
               <div className="title-header">
                 <span className="title">{projectName}</span>
-                <a href="https://www.taptaptask.com" className="cursor-pointer">
+                <a
+                  href={siteLink}
+                  target="_blank"
+                  className="cursor-pointer"
+                  rel="noreferrer"
+                >
                   <ExternalLinkIcon height={24} />
                 </a>
               </div>
               <div className="content-container">
-                {/* <div className="image-container ">
+                <div className="image-container ">
                   {" "}
-                  <Image
-                    src="/taptaptask.webp"
-                    layout="fill"
-                    className={"image"}
-                  />
-                </div> */}
+                  <Image src={imageLink} layout="fill" className={"image"} />
+                </div>
                 <div className="description-container">
                   <p>{projectDescription}</p>
                   <p>Read More...</p>
@@ -108,7 +83,7 @@ const Projects: NextPage = () => {
                 {gitHubLinks.map((link, index) => {
                   return (
                     <div key={index}>
-                      <a href={link.link}>
+                      <a href={link.link} target="_blank" rel="noreferrer">
                         <GitHubIcon />
                       </a>
                       <p>{link.name}</p>
