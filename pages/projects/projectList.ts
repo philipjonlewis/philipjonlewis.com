@@ -8,7 +8,7 @@ export const projectContent = [
       "Typescript",
       "React",
       "Redux Toolkit",
-      "RTK Query",
+      //   "RTK Query",
       "Node",
       "Express",
       "MongoDB",
@@ -57,7 +57,7 @@ export const projectContent = [
       "Firebase + Firestore",
     ],
     siteLink: "https://quicknotesbyphilip.netlify.app",
-    imageLink: "/quicknotes.webp",
+    imageLink: "/quicknotes.png",
     gitHubLinks: [
       {
         name: "Front-End",
@@ -79,6 +79,20 @@ export const projectContent = [
     ],
     siteLink: "https://quicknotesbyphilip.netlify.app",
     imageLink: "/easymoney.webp",
+    gitHubLinks: [
+      {
+        name: "Front-End",
+        link: "https://www.github.com/_jonlewis",
+      },
+    ],
+  },
+  {
+    projectId: 5,
+    projectName: "philipjonlewis",
+    projectDescription: "philipjonlewis portfolio website",
+    techStack: ["Typescript", "React + NextJs", "Tailwind", "Css + Sass"],
+    siteLink: "https://quicknotesbyphilip.netlify.app",
+    imageLink: "/philipjonlewis.png",
     gitHubLinks: [
       {
         name: "Front-End",

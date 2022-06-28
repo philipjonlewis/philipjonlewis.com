@@ -30,7 +30,7 @@ const Projects: NextPage = () => {
   };
 
   return (
-    <motion.div className="mt-10">
+    <motion.div className="projects-page">
       <motion.div
         variants={container}
         initial="hidden"
