@@ -7,7 +7,7 @@ import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { GitHubIcon } from "../../components/branding";
 import Image from "next/image";
 
-import { projectContent } from "./projectList";
+import projectContent from "./projectList";
 
 const Projects: NextPage = () => {
   const container = {

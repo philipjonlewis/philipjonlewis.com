@@ -1,4 +1,4 @@
-export const projectContent = [
+const projectContent = [
   {
     projectId: 1,
     projectName: "taptaptask",
@@ -101,3 +101,5 @@ export const projectContent = [
     ],
   },
 ];
+
+export default projectContent;
