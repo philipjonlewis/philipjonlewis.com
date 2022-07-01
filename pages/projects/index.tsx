@@ -71,7 +71,7 @@ const Projects: NextPage = () => {
                 </div>
                 <div className="description-container">
                   <p>{projectDescription}</p>
-                  <p>Read More...</p>
+                  {/* <p>Read More...</p> */}
                 </div>
                 <div className="tech-stack-container">
                   {techStack.map((stack, index) => {

@@ -65,27 +65,27 @@ export const projectContent = [
       },
     ],
   },
-  {
-    projectId: 4,
-    projectName: "easymoney",
-    projectDescription: "easymoney is a finance management app",
-    techStack: [
-      "Typescript",
-      "React",
-      "EditorJs",
-      "Css + Sass",
-      "Vite",
-      "Firebase + Firestore",
-    ],
-    siteLink: "https://quicknotesbyphilip.netlify.app",
-    imageLink: "/easymoney.webp",
-    gitHubLinks: [
-      {
-        name: "Front-End",
-        link: "https://www.github.com/_jonlewis",
-      },
-    ],
-  },
+  // {
+  //   projectId: 4,
+  //   projectName: "easymoney",
+  //   projectDescription: "easymoney is a finance management app",
+  //   techStack: [
+  //     "Typescript",
+  //     "React",
+  //     "EditorJs",
+  //     "Css + Sass",
+  //     "Vite",
+  //     "Firebase + Firestore",
+  //   ],
+  //   siteLink: "https://quicknotesbyphilip.netlify.app",
+  //   imageLink: "/easymoney.webp",
+  //   gitHubLinks: [
+  //     {
+  //       name: "Front-End",
+  //       link: "https://www.github.com/_jonlewis",
+  //     },
+  //   ],
+  // },
   {
     projectId: 5,
     projectName: "philipjonlewis",
