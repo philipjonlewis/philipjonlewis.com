@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 
@@ -8,9 +8,24 @@ const Post = () => {
   const router = useRouter();
   const { projectId } = router.query;
 
-  console.log(projectId);
+  const [projectData, setProjectData] = useState([]);
+  const { projectName } = projectData;
 
-  return <div>{projectId}</div>;
+  const getProjectData = async () => {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/projects/software/${projectId}`
+    );
+    const data = await res.json();
+    console.log(data);
+    setProjectData(await data.payload);
+  };
+
+  useEffect(() => {
+    console.log();
+    getProjectData();
+  }, []);
+
+  return <div>{projectName}</div>;
 };
 
 export default Post;
