@@ -21,11 +21,7 @@ interface ProjectContentFormat {
   }[];
 }
 
-const Projects: NextPage = ({
-  projectList,
-}: {
-  projectList: ProjectContentFormat[];
-}) => {
+const Projects: NextPage = () => {
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -45,6 +41,21 @@ const Projects: NextPage = ({
     },
   };
 
+  const [projectList, setProjectList] = useState([]);
+
+  const getProjectData = async () => {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/projects/software`
+    );
+    const data = await res.json();
+    setProjectList(await data.payload);
+  };
+
+  useEffect(() => {
+    console.log();
+    getProjectData();
+  }, []);
+
   return (
     <motion.div className="projects-page">
       <motion.div
@@ -53,7 +64,7 @@ const Projects: NextPage = ({
         animate="show"
         className="projects-container"
       >
-        {projectList.map((project: ProjectContentFormat) => {
+        {projectList?.map((project: ProjectContentFormat) => {
           const {
             projectId,
             projectName,
@@ -123,18 +134,18 @@ const Projects: NextPage = ({
 //   };
 // }
 
-export async function getStaticProps(context: any) {
-  const apiPath =
-    process.env.ENVIRONMENT == "production"
-      ? process.env.API_PATH_PRODUCTION
-      : process.env.API_PATH_DEVELOPMENT;
+// export async function getStaticProps(context: any) {
+//   const apiPath =
+//     process.env.ENVIRONMENT == "production"
+//       ? process.env.API_PATH_PRODUCTION
+//       : process.env.API_PATH_DEVELOPMENT;
 
-  const res = await fetch(`${apiPath}/api/projects/software`);
-  const data = await res.json();
+//   const res = await fetch(`${apiPath}/api/projects/software`);
+//   const data = await res.json();
 
-  return {
-    props: { projectList: await data.payload }, // will be passed to the page component as props
-  };
-}
+//   return {
+//     props: { projectList: await data.payload }, // will be passed to the page component as props
+//   };
+// }
 
 export default Projects;
