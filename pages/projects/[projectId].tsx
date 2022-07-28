@@ -22,10 +22,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
+  const apiPath =
+    process.env.ENVIRONMENT == "production"
+      ? process.env.API_PATH_PRODUCTION
+      : process.env.API_PATH_DEVELOPMENT;
+
   const projectId = context.params.projectId;
-  const res = await fetch(
-    `http://localhost:3000/api/projects/software/${projectId}`
-  );
+  const res = await fetch(`${apiPath}/api/projects/software/${projectId}`);
   const data = await res.json();
 
   return {
