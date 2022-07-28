@@ -48,7 +48,7 @@ const projectContent: ProjectContentFormat[] = [
   },
   {
     projectId: 3,
-    projectName: "qwinotes",
+    projectName: "QuickNotes",
     projectDescription: "quicknotes is a minimalist block style editor",
     techStack: [
       "Typescript",
