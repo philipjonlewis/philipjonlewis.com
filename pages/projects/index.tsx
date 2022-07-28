@@ -8,18 +8,7 @@ import { GitHubIcon } from "../../components/branding";
 import Image from "next/image";
 import Link from "next/link";
 
-interface ProjectContentFormat {
-  projectId: number;
-  projectName: string;
-  projectDescription: string;
-  techStack: string[];
-  siteLink: string;
-  imageLink: string;
-  gitHubLinks: {
-    name: string;
-    link: string;
-  }[];
-}
+import type { ProjectContentFormat } from "../../types/projects/software/softwareProjectTypes";
 
 const Projects: NextPage = () => {
   const container = {
@@ -27,7 +16,7 @@ const Projects: NextPage = () => {
     show: {
       opacity: 1,
       // transition: {
-      //   staggerChildren: 0.1,
+      //   staggerChildren: 0.5,
       // },
     },
   };
@@ -36,12 +25,12 @@ const Projects: NextPage = () => {
     // hidden: { opacity: 0, y: -50 },
     show: {
       opacity: 1,
-      y: 0,
+      // y: 0,
       // transition: { type: "spring" },
     },
   };
 
-  const [projectList, setProjectList] = useState([]);
+  const [projectList, setProjectList] = useState<ProjectContentFormat[]>([]);
 
   const getProjectData = async () => {
     const res = await fetch(
@@ -52,7 +41,6 @@ const Projects: NextPage = () => {
   };
 
   useEffect(() => {
-    console.log();
     getProjectData();
   }, []);
 
@@ -73,7 +61,7 @@ const Projects: NextPage = () => {
             gitHubLinks,
             siteLink,
             imageLink,
-          } = project;
+          }: ProjectContentFormat = project;
           return (
             <motion.div
               variants={item}
@@ -100,7 +88,29 @@ const Projects: NextPage = () => {
                   <p>{projectDescription}</p>
                   {/* <p>Read More...</p> */}
                 </div>
-                <Link href={`/projects/${projectId}`}>Page</Link>
+
+                <div className="page-link-container">
+                  <Link href={`/projects/${projectId}`}>
+                    <span>
+                      <p>Read More</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </span>
+                  </Link>
+                </div>
+
                 <div className="tech-stack-container">
                   {techStack.map((stack, index) => {
                     return <span key={index}>{stack}</span>;

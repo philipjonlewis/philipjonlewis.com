@@ -3,13 +3,15 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 
 import { projectContent } from "../../db/projects/software/softwareProjects";
+import type { ProjectContentFormat } from "../../db/projects/software/softwareProjects";
 
 const Post = () => {
   const router = useRouter();
   const { projectId } = router.query;
 
-  const [projectData, setProjectData] = useState([]);
-  const { projectName } = projectData;
+  const [projectData, setProjectData] = useState<
+    ProjectContentFormat | undefined
+  >(undefined);
 
   const getProjectData = async () => {
     const res = await fetch(
@@ -21,11 +23,11 @@ const Post = () => {
   };
 
   useEffect(() => {
-    console.log();
     getProjectData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <div>{projectName}</div>;
+  return <div>{projectId}</div>;
 };
 
 export default Post;

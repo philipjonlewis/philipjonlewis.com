@@ -1,15 +1,4 @@
-interface ProjectContentFormat {
-  projectId: number;
-  projectName: string;
-  projectDescription: string;
-  techStack: string[];
-  siteLink: string;
-  imageLink: string;
-  gitHubLinks: {
-    name: string;
-    link: string;
-  }[];
-}
+import type { ProjectContentFormat } from "../../../types/projects/software/softwareProjectTypes";
 
 const projectContent: ProjectContentFormat[] = [
   {
@@ -59,7 +48,7 @@ const projectContent: ProjectContentFormat[] = [
   },
   {
     projectId: 3,
-    projectName: "quicknotes",
+    projectName: "qwinotes",
     projectDescription: "quicknotes is a minimalist block style editor",
     techStack: [
       "Typescript",
@@ -73,7 +62,7 @@ const projectContent: ProjectContentFormat[] = [
     imageLink: "/quicknotes.png",
     gitHubLinks: [
       {
-        name: "Front-End",
+        name: "Full Stack",
         link: "https://www.github.com/_jonlewis",
       },
     ],

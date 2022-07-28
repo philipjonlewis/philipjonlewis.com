@@ -17,7 +17,7 @@
       @apply bg-slate-100 dark:bg-neutral-800 transition rounded-md p-2 hover:shadow-md flex flex-col justify-between;
 
       .title-header {
-        @apply flex flex-row justify-between px-2 py-4 border-b-[1px] border-slate-200;
+        @apply flex flex-row justify-between px-2 py-2;
 
         .title {
           @apply text-xl font-semibold;
@@ -61,11 +61,37 @@
           }
         }
 
-        .tech-stack-container {
-          @apply text-xs font-semibold flex flex-wrap gap-1 max-w-full;
+        .page-link-container {
+          @apply mb-2 flex flex-row justify-end;
 
           span {
-            @apply bg-slate-200 dark:bg-neutral-700 px-2 py-1 rounded-full h-fit min-w-fit;
+            @apply cursor-pointer flex flex-row justify-center items-center text-xs text-blue-600  px-2 py-1 rounded-full
+            border-blue-600 border  hover:bg-blue-600 hover:text-white dark:text-white dark:border-white dark:hover:border-blue-600;
+
+            p {
+              @apply ml-1 font-semibold;
+            }
+
+            svg {
+              transition: all 0.3s ease-in-out;
+              height: 1.4rem;
+            }
+          }
+
+          &:hover {
+            span {
+              svg {
+                @apply translate-x-2;
+              }
+            }
+          }
+        }
+
+        .tech-stack-container {
+          @apply text-xs font-semibold flex flex-wrap gap-1 max-w-full border-t-[1px] pt-2 border-neutral-200 dark:border-neutral-600;
+
+          span {
+            @apply text-xs bg-slate-200 dark:bg-neutral-700 px-2 py-1 rounded-full h-fit min-w-fit;
           }
         }
       }
