@@ -3,7 +3,7 @@ import type { ProjectContentFormat } from "../../../types/projects/software/soft
 const projectContent: ProjectContentFormat[] = [
   {
     projectId: 1,
-    projectName: "taptaptask",
+    projectName: "Taptaptask",
     projectDescription:
       "taptaptask is a task management tool for phase-based projects.",
     techStack: [
@@ -31,21 +31,21 @@ const projectContent: ProjectContentFormat[] = [
       },
     ],
   },
-  {
-    projectId: 2,
-    projectName: "archestimator",
-    projectDescription:
-      "archestimator is a construction cost estimator for architects.",
-    techStack: ["Typescript", "Svelte", "Css + Sass", "Rollup"],
-    siteLink: "https://www.archestimator.com",
-    imageLink: "/archestimator.jpeg",
-    gitHubLinks: [
-      {
-        name: "Front-End",
-        link: "https://www.github.com/_jonlewis",
-      },
-    ],
-  },
+  // {
+  //   projectId: 2,
+  //   projectName: "archestimator",
+  //   projectDescription:
+  //     "archestimator is a construction cost estimator for architects.",
+  //   techStack: ["Typescript", "Svelte", "Css + Sass", "Rollup"],
+  //   siteLink: "https://www.archestimator.com",
+  //   imageLink: "/archestimator.jpeg",
+  //   gitHubLinks: [
+  //     {
+  //       name: "Front-End",
+  //       link: "https://www.github.com/_jonlewis",
+  //     },
+  //   ],
+  // },
   {
     projectId: 3,
     projectName: "QuickNotes",
@@ -90,7 +90,7 @@ const projectContent: ProjectContentFormat[] = [
   // },
   {
     projectId: 5,
-    projectName: "philipjonlewis",
+    projectName: "Philip Lewis Portfolio",
     projectDescription: "philipjonlewis portfolio website",
     techStack: ["Typescript", "React + NextJs", "Tailwind", "Css + Sass"],
     siteLink: "https://quicknotesbyphilip.netlify.app",

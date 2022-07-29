@@ -10,7 +10,11 @@ import Link from "next/link";
 
 import type { ProjectContentFormat } from "../../types/projects/software/softwareProjectTypes";
 
-const Projects: NextPage = () => {
+const Projects: NextPage = ({
+  projectList,
+}: {
+  projectList: ProjectContentFormat[];
+}) => {
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -30,19 +34,19 @@ const Projects: NextPage = () => {
     },
   };
 
-  const [projectList, setProjectList] = useState<ProjectContentFormat[]>([]);
+  // const [projectList, setProjectList] = useState<ProjectContentFormat[]>([]);
 
-  const getProjectData = async () => {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/projects/software`
-    );
-    const data = await res.json();
-    setProjectList(await data.payload);
-  };
+  // const getProjectData = async () => {
+  //   const res = await fetch(
+  //     `${process.env.NEXT_PUBLIC_API_URL}/api/projects/software`
+  //   );
+  //   const data = await res.json();
+  //   setProjectList(await data.payload);
+  // };
 
-  useEffect(() => {
-    getProjectData();
-  }, []);
+  // useEffect(() => {
+  //   getProjectData();
+  // }, []);
 
   return (
     <motion.div className="projects-page">
@@ -137,25 +141,15 @@ const Projects: NextPage = () => {
   );
 };
 
-// export async function getStaticPaths() {
-//   return {
-//     paths: [{ params: { projectId: 1 } }, { params: { projectId: 2 } }],
-//     fallback: false, // can also be true or 'blocking'
-//   };
-// }
+export async function getStaticProps(context: any) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/projects/software`
+  );
+  const data = await res.json();
 
-// export async function getStaticProps(context: any) {
-//   const apiPath =
-//     process.env.ENVIRONMENT == "production"
-//       ? process.env.API_PATH_PRODUCTION
-//       : process.env.API_PATH_DEVELOPMENT;
-
-//   const res = await fetch(`${apiPath}/api/projects/software`);
-//   const data = await res.json();
-
-//   return {
-//     props: { projectList: await data.payload }, // will be passed to the page component as props
-//   };
-// }
+  return {
+    props: { projectList: await data.payload },
+  };
+}
 
 export default Projects;
