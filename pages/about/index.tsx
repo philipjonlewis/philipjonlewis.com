@@ -35,17 +35,17 @@ const About: NextPage = () => {
           <p>
             I&#39;m an architect, a designer and a{" "}
             <span className="font-semibold text-amber-600 dark:text-amber-500">
-              self-taught software engineer
+              self-taught software developer
             </span>
             . I&#39;m motivated by meaningful challenges and inspired by
             building technology that helps people.
           </p>
           <br />
           <p>
-            Completed projects under my architectural practice range from
-            commercial, office interiors, residential &#x26; planning projects.
-            Services provided were from, but not limited to, architectural
-            design to project management.
+            Prior to shifting careers into tech, completed projects under my
+            architectural practice range from commercial, office interiors,
+            residential &#x26; planning projects. Services provided were from,
+            but not limited to, architectural design to project management.
           </p>
           <br />
 
@@ -69,11 +69,19 @@ const About: NextPage = () => {
           <br />
 
           <p>
-            I mainly work with the javascript ecosystem but should the need to
-            learn and use additional languages and/or technologies arise, I
-            wouldnt hesitate to do so.
+            My primary tech stack is MERN (MongoDB,Express,React & Node with
+            typescript. I mainly work within the javascript ecosystem but as a
+            self-taught developer, should the need to learn and use additional
+            languages and/or technologies arise, I wouldn&apos;t hesitate to
+            take on that challenge.
           </p>
 
+          <br />
+
+          <p>
+            I&apos;m interested in pursuing mobile app development & information
+            security in the near future
+          </p>
           <br />
           <p>
             I&#39;m currently building two apps.{" "}

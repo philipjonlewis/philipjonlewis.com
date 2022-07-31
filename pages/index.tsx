@@ -4,7 +4,7 @@ import { annotate, annotationGroup } from "rough-notation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-import { ExternalLinkIcon,ArrowRightIcon } from "@heroicons/react/solid";
+import { ExternalLinkIcon, ArrowRightIcon } from "@heroicons/react/solid";
 
 const Home: NextPage = () => {
   const myName = useRef() as any;
@@ -97,9 +97,8 @@ const Home: NextPage = () => {
           <p className="text-xl md:text-3xl font-sans font-semibold">
             I&#39;m an <span ref={myArchitect}>architect</span>, a{" "}
             <span ref={myDesigner}>designer</span>, and a{" "}
-            <span ref={myEngineer}>software engineer</span> <br /> focused on
-            digital <span ref={productDesign}>product design </span> and
-            development.{" "}
+            <span ref={myEngineer}>software developer</span> <br /> focused on{" "}
+            <span ref={productDesign}>full-stack web development </span>
           </p>
         </div>
 
@@ -123,7 +122,8 @@ const Home: NextPage = () => {
             className="text-sm font-semibold dark:text-slate-50"
             ref={openPosition}
           >
-            I&#39;m currently looking for a software engineering position in the fields of analytics, healthcare, education or finance.
+            I&#39;m currently looking for a front-end and/or back-end
+            development/engineering position.
           </p>
         </div>
         <div

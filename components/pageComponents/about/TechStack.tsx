@@ -44,7 +44,7 @@ const TechStack = () => {
                 <li>&#8250; Strapi</li>
               </ul>
               <li className="text-sm font-normal mt-2 text-teal-600 dark:text-red-300">
-                API
+                API / Query Language
               </li>
               <ul className="ml-2">
                 <li>&#8250; REST / RESTful</li>
@@ -64,10 +64,13 @@ const TechStack = () => {
                 <li>&#8250; Tailwind</li>
               </ul>
               <li className="text-sm font-normal mt-2 text-teal-600  dark:text-red-300">
-                Others
+                Compilers, Bundlers, etc.
               </li>
               <ul className="ml-2">
-                <li>&#8250; Google Firebase</li>
+                <li>&#8250; Firebase</li>
+                <li>&#8250; Vite</li>
+                <li>&#8250; Webpack</li>
+                <li>&#8250; Parcel</li>
               </ul>
             </ul>
           </div>

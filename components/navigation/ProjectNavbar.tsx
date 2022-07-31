@@ -15,24 +15,28 @@ export const ProjectNavbar = () => {
   }, [router.asPath]);
 
   return (
-    <div className=" container bg-gray-100 p-2 rounded-sm flex justify-start items-center gap-2">
+    <div className="container mt-2 pt-2 pb-2 mb-2 flex justify-start items-center gap-2 border-b-[1px] border-t-[1px] border-gray-300 dark:border-neutral-700">
       <div
         className={
-          activePath == "software"
-            ? "bg-gray-50 py-2 px-4 text-orange-500 text-sm"
-            : "hover:bg-gray-50 py-2 px-4 text-sm"
+          activePath == "branding" ? "active-sub-nav-link" : "sub-nav-link"
         }
       >
-        <Link href={"/projects/software"}>Software</Link>
+        <Link href={"/projects/branding"}>Branding</Link>
       </div>
+
       <div
         className={
-          activePath == "architecture"
-            ? "bg-gray-50 py-2 px-4 text-orange-500 text-sm"
-            : "hover:bg-gray-50 py-2 px-4 text-sm"
+          activePath == "architecture" ? "active-sub-nav-link" : "sub-nav-link"
         }
       >
         <Link href={"/projects/architecture"}>Architecture</Link>
+      </div>
+      <div
+        className={
+          activePath == "software" ? "active-sub-nav-link" : "sub-nav-link"
+        }
+      >
+        <Link href={"/projects/software"}>Software</Link>
       </div>
     </div>
   );

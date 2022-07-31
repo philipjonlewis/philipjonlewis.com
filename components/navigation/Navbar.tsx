@@ -18,7 +18,7 @@ const Navbar = () => {
     // });
     // logo.show();
   }, []);
-  console.log(router.pathname);
+  // console.log(router.pathname);
 
   const list = {
     visible: {
@@ -99,7 +99,9 @@ const Navbar = () => {
             <motion.a
               variants={item}
               className={
-                router.pathname == "/about" ? "active-navlink" : "nav-link"
+                router.pathname.includes("/about")
+                  ? "active-navlink"
+                  : "nav-link"
               }
             >
               About
@@ -110,7 +112,9 @@ const Navbar = () => {
             <motion.a
               variants={item}
               className={
-                router.pathname == "/articles" ? "active-navlink" : "nav-link"
+                router.pathname.includes("/articles")
+                  ? "active-navlink"
+                  : "nav-link"
               }
             >
               Articles
@@ -121,7 +125,9 @@ const Navbar = () => {
             <motion.a
               variants={item}
               className={
-                router.pathname == "/projects" ? "active-navlink" : "nav-link"
+                router.pathname.includes("/projects")
+                  ? "active-navlink"
+                  : "nav-link"
               }
             >
               Projects
@@ -132,7 +138,9 @@ const Navbar = () => {
             <motion.a
               variants={item}
               className={
-                router.pathname == "/contact" ? "active-navlink" : "nav-link"
+                router.pathname.includes("/contact")
+                  ? "active-navlink"
+                  : "nav-link"
               }
             >
               Contact

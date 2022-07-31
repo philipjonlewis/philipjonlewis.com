@@ -1,5 +1,5 @@
 .projects-page {
-  @apply mt-6 mx-4 sm:mx-0;
+  @apply mt-4 mx-4 sm:mx-0;
 
   .projects-container {
     @apply grid 
@@ -10,11 +10,11 @@
       lg:grid-cols-3 
       xl:grid-cols-4 
       2xl:grid-cols-5 
-  
+
       mb-6;
 
     .project-card {
-      @apply bg-slate-100 dark:bg-neutral-800 transition rounded-md p-2 hover:shadow-md flex flex-col justify-between;
+      @apply bg-slate-100 dark:bg-neutral-800 transition rounded-sm p-2 hover:shadow-md flex flex-col justify-between;
 
       .title-header {
         @apply flex flex-row justify-between px-2 py-2;
@@ -46,6 +46,19 @@
             object-fit: cover; // Optional
             opacity: 100%;
             transition: all 0.5s ease-out;
+          }
+
+          .project-status {
+            @apply bg-white bg-opacity-80 py-1 px-2 rounded-full;
+            z-index: 5;
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+
+            p {
+              @apply text-xs font-bold text-gray-900;
+              font-size: 0.7rem;
+            }
           }
         }
 

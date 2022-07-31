@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 
-import { projectContent } from "../../db/projects/software/softwareProjects";
-import type { ProjectContentFormat } from "../../db/projects/software/softwareProjects";
-
+import { projectContent } from "../../../db/projects/software/softwareProjects";
+import type { ProjectContentFormat } from "../../../db/projects/software/softwareProjects";
+import ReactMarkdown from "react-markdown";
+import ProjectsLayout from "../../../components/layouts/ProjectsLayout";
 const Post = ({ projectData }) => {
   const router = useRouter();
   const { projectName, projectDescription } = projectData;
@@ -14,6 +15,7 @@ const Post = ({ projectData }) => {
       <button onClick={() => router.back()}>Go Back</button>
       <p>Project Name : {projectName}</p>
       <p>Project Description : {projectDescription}</p>
+      <ReactMarkdown># Hello, *world*!</ReactMarkdown>
     </div>
   );
 };

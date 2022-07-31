@@ -9,6 +9,7 @@ interface ProjectContentFormat {
     name: string;
     link: string;
   }[];
+  status: string;
 }
 
 export { ProjectContentFormat };
