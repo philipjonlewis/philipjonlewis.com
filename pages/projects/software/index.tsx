@@ -87,7 +87,11 @@ const Projects: NextPage = ({
               </div>
               <div className="content-container">
                 <div className="image-container ">
-                  <div className="project-status">
+                  <div
+                    className="project-status"
+                    title="Project Status
+                  "
+                  >
                     <p>{status}</p>{" "}
                   </div>
                   <Image src={imageLink} layout="fill" className={"image"} />
