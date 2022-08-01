@@ -6,7 +6,7 @@ import path from "path";
 import {
   projectContent,
   ProjectContentFormat,
-} from "../../../../db/projects/software/softwareProjects";
+} from "../../../../db/softwareProjects";
 
 interface ResponseData {
   payload: ProjectContentFormat[];

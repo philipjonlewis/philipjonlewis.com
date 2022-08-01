@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     enter: { opacity: 1 },
     exit: { opacity: 0 },
   };
-  console.log(pathname);
+  // console.log(pathname);
   return (
     <Layout>
       {pathname.includes("/projects") && <ProjectNavbar />}
@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           exit="exit" // Exit state (used later) to variants.exit
           transition={{ type: "linear" }}
         > */}
-          <Component {...pageProps} />
+        <Component {...pageProps} />
         {/* </motion.main> */}
       </AnimatePresence>
     </Layout>

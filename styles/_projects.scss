@@ -10,8 +10,8 @@
       lg:grid-cols-3 
       xl:grid-cols-4 
       2xl:grid-cols-5 
-
-      mb-6;
+      mb-28
+      md:mb-6;
 
     .project-card {
       @apply bg-slate-100 dark:bg-neutral-800 transition rounded-sm p-2 hover:shadow-md flex flex-col justify-between;

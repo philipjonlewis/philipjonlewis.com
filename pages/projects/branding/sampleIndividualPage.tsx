@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 
-import { projectContent } from "../../../db/projects/software/softwareProjects";
-import type { ProjectContentFormat } from "../../../db/projects/software/softwareProjects";
+import { projectContent } from "../../../db/softwareProjects";
+import type { ProjectContentFormat } from "../../../db/softwareProjects";
 import ReactMarkdown from "react-markdown";
 import ProjectsLayout from "../../../components/layouts/ProjectsLayout";
 const Post = () => {

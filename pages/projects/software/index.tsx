@@ -7,11 +7,12 @@ import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { GitHubIcon } from "../../../components/branding";
 import Image from "next/image";
 import Link from "next/link";
-
+import fs from "fs";
+import path from "path";
 import type { ProjectContentFormat } from "../../../types/projects/software/softwareProjectTypes";
 import ProjectsLayout from "../../../components/layouts/ProjectsLayout";
-
-const Projects: NextPage = () => {
+import matter from "gray-matter";
+const Projects: NextPage = ({ projectList }) => {
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -31,153 +32,6 @@ const Projects: NextPage = () => {
     },
   };
 
-  // const [projectList, setProjectList] = useState<ProjectContentFormat[]>([]);
-
-  // const getProjectData = async () => {
-  //   const res = await fetch(
-  //     `${process.env.NEXT_PUBLIC_API_URL}/api/projects/software`
-  //   );
-  //   const data = await res.json();
-  //   setProjectList(await data.payload);
-  // };
-
-  // useEffect(() => {
-  //   getProjectData();
-  // }, []);
-
-  const projectContent: ProjectContentFormat[] = [
-    {
-      projectId: 1,
-      projectName: "Taptaptask",
-      projectDescription:
-        "taptaptask is a task management tool for phase-based projects. CRUD REST API Backend made with node + express --fix this description",
-      techStack: [
-        "Typescript",
-        "React",
-        "Vite",
-        "Redux Toolkit",
-        "RTK Query",
-        "Framer-Motion",
-        "Node",
-        "Express",
-        "MongoDB",
-        "Mongoose",
-        "Css + Sass",
-      ],
-      siteLink: "https://www.taptaptask.com",
-      imageLink: "/taptaptask.png",
-      gitHubLinks: [
-        {
-          name: "Front-End",
-          link: "https://github.com/philipjonlewis/taptaptask_frontend",
-        },
-        {
-          name: "Back-End",
-          link: "https://github.com/philipjonlewis/taptaptask_backend",
-        },
-      ],
-      status: "Production",
-    },
-
-    {
-      projectId: 2,
-      projectName: "QuickNotes",
-      projectDescription:
-        "quicknotes is a minimalist block style editor. Front-end made with vite+react. backend,database and authentication made with google firebase. --fix this description",
-      techStack: [
-        "Typescript",
-        "React",
-        "Vite",
-        "EditorJs",
-        "Css + Sass",
-        "Firebase + Firestore",
-      ],
-      siteLink: "https://quicknotesbyphilip.netlify.app",
-      imageLink: "/quicknotes.png",
-      gitHubLinks: [
-        {
-          name: "Full-Stack",
-          link: "https://github.com/philipjonlewis/quicknotes",
-        },
-      ],
-      status: "Production",
-    },
-    // {
-    //   projectId: 4,
-    //   projectName: "easymoney",
-    //   projectDescription: "easymoney is a finance management app",
-    //   techStack: [
-    //     "Typescript",
-    //     "React",
-    //     "EditorJs",
-    //     "Css + Sass",
-    //     "Vite",
-    //     "Firebase + Firestore",
-    //   ],
-    //   siteLink: "https://quicknotesbyphilip.netlify.app",
-    //   imageLink: "/easymoney.webp",
-    //   gitHubLinks: [
-    //     {
-    //       name: "Front-End",
-    //       link: "https://www.github.com/_jonlewis",
-    //     },
-    //   ],
-    // },
-    {
-      projectId: 3,
-      projectName: "Authentication Server",
-      projectDescription:
-        "Standard authentication server made with nodeJS+express.",
-      techStack: [
-        "Typescript",
-        "NodeJs + Express",
-        "MongoDB",
-        "Mongoose",
-        "EJS",
-      ],
-      siteLink: "https://github.com/philipjonlewis/authentication_server",
-      imageLink: "/authserver.png",
-      gitHubLinks: [
-        {
-          name: "Back-End",
-          link: "https://github.com/philipjonlewis/authentication_server",
-        },
-      ],
-      status: "Development",
-    },
-    {
-      projectId: 4,
-      projectName: "Archestimator",
-      projectDescription:
-        "archestimator is a construction cost estimator for architects.",
-      techStack: ["Typescript", "Svelte", "Vite", "Css + Sass", "Rollup"],
-      siteLink: "https://www.archestimator.com",
-      imageLink: "/archestimator.png",
-      gitHubLinks: [
-        {
-          name: "Front-End",
-          link: "https://github.com/philipjonlewis/archestimator.github.io",
-        },
-      ],
-      status: "Development",
-    },
-    {
-      projectId: 5,
-      projectName: "Philip Lewis Portfolio",
-      projectDescription: "philipjonlewis portfolio website",
-      techStack: ["Typescript", "React", "NextJs", "Tailwind", "Css + Sass"],
-      siteLink: "https://quicknotesbyphilip.netlify.app",
-      imageLink: "/philipjonlewis.png",
-      gitHubLinks: [
-        {
-          name: "Full-Stack",
-          link: "https://github.com/philipjonlewis/philipjonlewis.com",
-        },
-      ],
-      status: "Production",
-    },
-  ];
-
   return (
     <motion.div className="projects-page">
       <motion.div
@@ -186,7 +40,7 @@ const Projects: NextPage = () => {
         animate="show"
         className="projects-container"
       >
-        {projectContent?.map((project: ProjectContentFormat) => {
+        {projectList?.map((project: ProjectContentFormat) => {
           const {
             projectId,
             projectName,
@@ -196,7 +50,7 @@ const Projects: NextPage = () => {
             siteLink,
             imageLink,
             status,
-          }: ProjectContentFormat = project;
+          } = project.frontMatter;
           return (
             <motion.div
               variants={item}
@@ -230,8 +84,8 @@ const Projects: NextPage = () => {
                   {/* <p>Read More...</p> */}
                 </div>
 
-                {/* <div className="page-link-container">
-                  <Link href={`/projects/software/${projectId}`}>
+                <div className="page-link-container">
+                  <Link href={`/projects/software/${project.slug}`}>
                     <span>
                       <p>Read More</p>
                       <svg
@@ -250,16 +104,16 @@ const Projects: NextPage = () => {
                       </svg>
                     </span>
                   </Link>
-                </div> */}
+                </div>
 
                 <div className="tech-stack-container">
-                  {techStack.map((stack, index) => {
+                  {techStack?.map((stack, index) => {
                     return <span key={index}>{stack}</span>;
                   })}
                 </div>
               </div>
               <div className="github-link-container">
-                {gitHubLinks.map((link, index) => {
+                {gitHubLinks?.map((link, index) => {
                   return (
                     <div key={index}>
                       <a href={link.link} target="_blank" rel="noreferrer">
@@ -279,13 +133,30 @@ const Projects: NextPage = () => {
 };
 
 export async function getStaticProps(context: any) {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/projects/software`
-  );
-  const data = await res.json();
+  const files = fs.readdirSync(path.join("db/projects/software"));
+
+  const posts = files.map((fileName) => {
+    const slug = fileName.replace(".md", "");
+
+    const markdownWithMeta = fs.readFileSync(
+      path.join("db/projects/software", fileName),
+      "utf-8"
+    );
+
+    const { data: frontMatter } = matter(markdownWithMeta);
+
+    return {
+      slug,
+      frontMatter,
+    };
+  });
+
+  const sortByProjectId = (a, b) => {
+    return a.frontMatter.projectId - b.frontMatter.projectId;
+  };
 
   return {
-    props: { projectList: await data.payload },
+    props: { projectList: posts.sort(sortByProjectId) },
   };
 }
 

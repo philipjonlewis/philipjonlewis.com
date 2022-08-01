@@ -85,3 +85,10 @@ a {
 //   backdrop-filter: blur(2px);
 //   backdrop-filter:  blur(2px)s;
 // }
+
+.mobile-navbar {
+  @apply md:hidden sticky bottom-0 w-full h-24  bg-gray-800 bg-opacity-50 backdrop-blur-sm;
+
+  position: fixed;
+  bottom: 0;
+}

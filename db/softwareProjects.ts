@@ -1,4 +1,4 @@
-import type { ProjectContentFormat } from "../../../types/projects/software/softwareProjectTypes";
+import type { ProjectContentFormat } from "../types/projects/software/softwareProjectTypes";
 import { randomUUID } from "crypto";
 
 

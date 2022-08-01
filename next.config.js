@@ -13,6 +13,11 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
 };
 
 module.exports = nextConfig;

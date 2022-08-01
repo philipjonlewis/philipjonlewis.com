@@ -13,7 +13,7 @@ const About: NextPage = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row md:justify-start md:mt-8">
+    <div className="flex flex-col md:flex-row md:justify-start md:mt-8 mb-28 md:mb-0">
       <motion.div
         initial="hidden"
         animate="visible"

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { projectContent } from "../../../../db/projects/software/softwareProjects";
+import { projectContent } from "../../../../db/softwareProjects";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { projectId } = req.query;
