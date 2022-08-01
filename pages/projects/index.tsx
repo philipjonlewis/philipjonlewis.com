@@ -9,7 +9,7 @@ const index: NextPage = () => {
 
   useEffect(() => {
     router.push("/projects/software");
-  }, []);
+  }, [router]);
 
   return <></>;
 };
