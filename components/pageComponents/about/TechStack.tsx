@@ -20,6 +20,7 @@ const TechStack = () => {
                 Front-End
               </li>
               <ul className="ml-2">
+                <li>&#8250; HTML5 </li>
                 <li>&#8250; React </li>
                 <li>&#8250; Next.js</li>
               </ul>

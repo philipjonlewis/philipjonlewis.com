@@ -108,7 +108,7 @@ const Navbar = () => {
             </motion.a>
           </Link>
 
-          <Link href="/articles">
+          {/* <Link href="/articles">
             <motion.a
               variants={item}
               className={
@@ -119,7 +119,7 @@ const Navbar = () => {
             >
               Articles
             </motion.a>
-          </Link>
+          </Link> */}
 
           <Link href="/projects">
             <motion.a

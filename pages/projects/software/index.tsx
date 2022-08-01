@@ -20,18 +20,18 @@ const Projects: NextPage = ({
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      // transition: {
-      //   staggerChildren: 0.5,
-      // },
+      transition: {
+        staggerChildren: 0.5,
+      },
     },
   };
 
   const item = {
-    // hidden: { opacity: 0, y: -50 },
+    hidden: { opacity: 0, y: -50 },
     show: {
       opacity: 1,
-      // y: 0,
-      // transition: { type: "spring" },
+      y: 0,
+      transition: { type: "spring" },
     },
   };
 
@@ -101,7 +101,7 @@ const Projects: NextPage = ({
                   {/* <p>Read More...</p> */}
                 </div>
 
-                <div className="page-link-container">
+                {/* <div className="page-link-container">
                   <Link href={`/projects/software/${projectId}`}>
                     <span>
                       <p>Read More</p>
@@ -121,7 +121,7 @@ const Projects: NextPage = ({
                       </svg>
                     </span>
                   </Link>
-                </div>
+                </div> */}
 
                 <div className="tech-stack-container">
                   {techStack.map((stack, index) => {

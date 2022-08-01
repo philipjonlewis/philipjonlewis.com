@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { annotate, annotationGroup } from "rough-notation";
 
 import TechStack from "../../components/pageComponents/about/TechStack";
+import DesignStack from "../../components/pageComponents/about/DesignStack";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 const About: NextPage = () => {
   const segment = {
@@ -107,6 +108,15 @@ const About: NextPage = () => {
         className="px-4 md:p-0 md:pl-4 md:w-fit md:pr-12 md:border-r-[1px]"
       >
         <TechStack />
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        transition={{ delay: 0.9 }}
+        variants={segment}
+        className="px-4 md:p-0 md:pl-4 md:w-fit md:pr-12 md:border-r-[1px]"
+      >
+        <DesignStack />
       </motion.div>
     </div>
   );
