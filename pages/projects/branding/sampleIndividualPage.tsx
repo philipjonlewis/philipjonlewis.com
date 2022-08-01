@@ -6,7 +6,7 @@ import { projectContent } from "../../../db/projects/software/softwareProjects";
 import type { ProjectContentFormat } from "../../../db/projects/software/softwareProjects";
 import ReactMarkdown from "react-markdown";
 import ProjectsLayout from "../../../components/layouts/ProjectsLayout";
-const Post = ({ projectData }) => {
+const Post = () => {
   // const router = useRouter();
   // const { projectName, projectDescription } = projectData;
   // return (

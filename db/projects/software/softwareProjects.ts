@@ -1,5 +1,7 @@
 import type { ProjectContentFormat } from "../../../types/projects/software/softwareProjectTypes";
 import { randomUUID } from "crypto";
+
+
 const projectContent: ProjectContentFormat[] = [
   {
     projectId: 1,
