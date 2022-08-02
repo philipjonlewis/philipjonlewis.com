@@ -27,7 +27,7 @@ const Architecture = ({ imagePaths }) => {
           // const imageLink = image.replace(".jpg", "");
           return (
             <div className="branding-thumbnail-container" key={index}>
-              <Link href={`/projects/branding/${image}`}>
+              <Link href={`/projects/branding/${image.replace(".png", "")}`}>
                 <a>
                   {/* <img
                     src={`/images/projects/branding/${image}/pure.svg`}
@@ -39,7 +39,7 @@ const Architecture = ({ imagePaths }) => {
                     className="temp-image"
                   /> */}
                   <Image
-                    src={`/images/projects/branding/${image}/colored.svg`}
+                    src={`/images/projects/branding/thumbnails/${image}`}
                     layout="fixed"
                     height={200}
                     width={200}
@@ -71,17 +71,10 @@ export default Architecture;
 
 export async function getStaticProps(context: any) {
   const imageFilePaths = fs.readdirSync(
-    path.join("public/images/projects/branding")
+    path.join("public/images/projects/branding/thumbnails")
   );
 
-  // console.log(imageFilePaths);
-
-  // const filteredImagePaths = imageFilePaths.filter((fileName) => {
-  //   if (fileName.includes(".jpg")) {
-  //     return fileName;
-  //   }
-  //   return;
-  // });
+  console.log(imageFilePaths);
 
   // const cleanedImagedPaths = filteredImagePaths.map((fileName) => {
   //   if (fileName.includes(".jpg")) {
