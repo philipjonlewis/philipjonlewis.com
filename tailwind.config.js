@@ -15,6 +15,14 @@ module.exports = {
       // screens: {
       //   xs: "320px",
       // },
+      width: {
+        "slider-full": "64rem",
+        "slider-small": "100%",
+      },
+      height: {
+        "slider-full": "42rem",
+        "slider-small": "100vh",
+      },
     },
     container: {
       center: true,

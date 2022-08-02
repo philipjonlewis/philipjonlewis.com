@@ -16,7 +16,7 @@ export const ProjectNavbar = () => {
 
   return (
     <div className="container mt-2 pt-2 pb-2 mb-2 flex justify-start items-center gap-2 border-b-[1px] border-t-[1px] border-gray-300 dark:border-neutral-700">
-      {/* <div
+      <div
         className={
           activePath == "branding" ? "active-sub-nav-link" : "sub-nav-link"
         }
@@ -30,14 +30,14 @@ export const ProjectNavbar = () => {
         }
       >
         <Link href={"/projects/architecture"}>Architecture</Link>
-      </div> */}
+      </div>
 
       <div
         className={
-          activePath == "software" ? "active-sub-nav-link" : "sub-nav-link"
+          activePath == "fullstack" ? "active-sub-nav-link" : "sub-nav-link"
         }
       >
-        <Link href={"/projects/software"}>Software Development</Link>
+        <Link href={"/projects/fullstack"}>Full-Stack Development</Link>
       </div>
     </div>
   );

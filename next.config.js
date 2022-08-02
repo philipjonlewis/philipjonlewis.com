@@ -15,7 +15,7 @@ const nextConfig = {
   },
   experimental: {
     images: {
-      unoptimized: true,
+      unoptimized: false,
     },
   },
 };

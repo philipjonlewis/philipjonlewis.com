@@ -8,7 +8,7 @@ const index: NextPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/projects/software");
+    router.push("/projects/fullstack");
   }, [router]);
 
   return <></>;

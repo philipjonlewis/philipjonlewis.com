@@ -95,10 +95,10 @@ const Home: NextPage = () => {
       >
         <div className="mb-4">
           <p className="text-xl md:text-3xl font-sans font-semibold">
-            I&#39;m an <span ref={myArchitect}>architect</span>, a{" "}
-            <span ref={myDesigner}>designer</span>, and a{" "}
-            <span ref={myEngineer}>software developer</span> <br /> focused on{" "}
-            <span ref={productDesign}>full-stack web development </span>
+            I&#39;m an <span ref={myArchitect}>Architect</span>, a{" "}
+            <span ref={myDesigner}>Designer</span>, and a{" "}
+            <span ref={myEngineer}>Full-Stack Developer</span> <br /> focused on{" "}
+            <span ref={productDesign}>product design & development</span>
           </p>
         </div>
 

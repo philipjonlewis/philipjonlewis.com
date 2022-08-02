@@ -10,7 +10,7 @@ const NotFound: NextPage = () => {
       // router.go("/");
       router.push("/");
     }, 3000);
-  }, []);
+  }, [router]);
 
   return <div>Error 404 : Page Not Found</div>;
 };

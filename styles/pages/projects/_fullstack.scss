@@ -1,0 +1,161 @@
+.projects-page {
+  @apply mx-4 sm:mx-0;
+
+  .projects-container {
+    @apply grid 
+        gap-2
+        grid-cols-1
+        sm:grid-cols-2 
+        md:grid-cols-2 
+        lg:grid-cols-3 
+        xl:grid-cols-4 
+        2xl:grid-cols-5 
+        mb-28
+        md:mb-6;
+
+    .project-card {
+      @apply bg-slate-100 dark:bg-neutral-800 transition rounded-sm p-2 hover:shadow-lg flex flex-col justify-between;
+
+      .title-header {
+        @apply flex flex-row justify-between px-2 py-2;
+
+        .title {
+          @apply text-base font-semibold;
+        }
+
+        a {
+          @apply text-orange-400 dark:text-blue-700 hover:text-blue-700 dark:hover:text-orange-500;
+        }
+      }
+
+      .content-container {
+        @apply h-full py-2 flex flex-col justify-start;
+
+        .image-container {
+          @apply rounded-md overflow-hidden mb-2;
+          position: relative;
+          width: 100%;
+          height: 200px;
+          // background-color: blue;
+          // opacity: 50%;
+
+          .image {
+            width: 100%;
+            height: 100%;
+            position: relative !important;
+            object-fit: cover; // Optional
+            opacity: 100%;
+            transition: all 0.5s ease-out;
+          }
+
+          .project-status {
+            @apply bg-white bg-opacity-60 py-1 px-2 rounded-full hover:bg-opacity-100 cursor-default;
+            z-index: 5;
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+
+            p {
+              @apply text-xs font-bold text-gray-900;
+              font-size: 0.7rem;
+            }
+          }
+        }
+
+        .description-container {
+          @apply mb-4 py-1 flex flex-col justify-between h-28;
+
+          p:nth-of-type(1) {
+            @apply text-sm;
+          }
+
+          p:nth-of-type(2) {
+            @apply text-right text-xs mt-2;
+          }
+        }
+
+        .page-link-container {
+          @apply mb-2 flex flex-row justify-end;
+
+          span {
+            @apply cursor-pointer flex flex-row justify-center items-center text-xs text-blue-600  px-2 py-1 rounded-full
+              border-blue-600 border  hover:bg-blue-600 hover:text-white dark:text-white dark:border-white dark:hover:border-blue-600;
+
+            p {
+              @apply ml-1 font-semibold;
+            }
+
+            svg {
+              transition: all 0.3s ease-in-out;
+              height: 1.4rem;
+            }
+          }
+
+          &:hover {
+            span {
+              svg {
+                @apply translate-x-2;
+              }
+            }
+          }
+        }
+
+        .tech-stack-container {
+          @apply text-xs font-semibold flex flex-wrap gap-1 max-w-full border-t-[1px] pt-2 border-neutral-200 dark:border-neutral-600;
+
+          span {
+            @apply text-xs bg-slate-200 dark:bg-neutral-700 px-2 py-1 rounded-full h-fit min-w-fit;
+          }
+        }
+      }
+
+      .github-link-container {
+        @apply px-2 py-2 flex justify-end gap-2;
+
+        div {
+          @apply flex flex-col justify-center items-center;
+
+          a {
+            @apply border-[1px] text-slate-800 border-slate-800 dark:bg-orange-600  w-fit p-2  inline-block rounded-full hover:text-white dark:text-white dark:border-none hover:bg-slate-800 dark:hover:bg-blue-800;
+
+            svg {
+              width: 1rem;
+              height: 1rem;
+              stroke-width: 2px;
+            }
+          }
+
+          p {
+            @apply text-xs pt-1 font-semibold text-gray-600 dark:text-gray-200;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fullstack-page {
+  @apply flex flex-col xl:flex-row;
+  height: 42rem;
+  width: 100%;
+  overflow: scroll;
+  // background-color: yellow;
+  // margin-bottom: 2rem;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-around;
+
+  .slider-container {
+    @apply w-slider-small h-slider-small xl:w-slider-full xl:h-slider-full;
+    // width: 42rem;
+    // height: 42rem;
+  }
+
+  .content-container {
+    @apply pl-2 ml-2  border-l-[1px] border-gray-300 dark:border-neutral-700;
+    // width: 50%;
+    // border-left: 1px solid white;
+    height: 100%;
+    overflow: scroll;
+  }
+}

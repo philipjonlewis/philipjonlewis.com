@@ -57,9 +57,9 @@ const About: NextPage = () => {
             </span>{" "}
             and an{" "}
             <span className="font-semibold text-purple-700 dark:text-purple-500">
-              organized leader
+              organized leader. <br />
             </span>{" "}
-            . I take pride in being{" "}
+            I take pride in being{" "}
             <span className="font-semibold text-cyan-700 dark:text-cyan-400">
               pragmatic
             </span>{" "}

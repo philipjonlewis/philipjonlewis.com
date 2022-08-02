@@ -1,0 +1,96 @@
+// @use "./projects/" as *;
+@use "./components/" as *;
+@use "./pages/" as *;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-slate-800 dark:bg-dark-bg dark:text-gray-100;
+    // @apply min-h-screen;
+  }
+
+  ::selection {
+    @apply text-white bg-indigo-500;
+  }
+
+  .btn {
+    @apply inline-block px-5 py-3 rounded-lg hover:bg-indigo-600 transition duration-300 shadow-lg bg-indigo-500 text-white capitalize tracking-wider font-semibold text-sm sm:text-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 whitespace-nowrap;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  // color: inherit;
+  text-decoration: none;
+  // background-color: #0f0f0f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nav-link {
+  @apply text-sm font-medium text-slate-700 dark:text-slate-50 py-3 px-6  hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer hover:rounded-sm;
+}
+
+// .nav-link {
+//   @apply block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700
+//   bg-red-500;
+// }
+
+.active-navlink {
+  @extend .nav-link;
+  @apply text-orange-600 dark:text-blue-500;
+}
+
+.common-sub-nav-link {
+  @apply py-2 px-4 text-sm rounded-sm;
+}
+
+.sub-nav-link {
+  @extend .common-sub-nav-link;
+  @apply hover:bg-slate-100 hover:dark:bg-neutral-700;
+}
+
+.active-sub-nav-link {
+  @extend .common-sub-nav-link;
+  @apply bg-slate-100 text-orange-600 dark:bg-neutral-800 dark:text-blue-500;
+}
+
+// html,
+// body,
+// * {
+//   cursor: none;
+// }
+
+// .app-cursor {
+//   z-index: 1000;
+//   border-radius: 50%;
+//   width: 100px;
+//   height: 100px;
+//   border: 0.5px solid lightgray;
+//   pointer-events: none;
+//   overflow: hidden;
+//   transform: translate3d(0, 0, 0);
+//   position: fixed;
+
+//   // background-color: rgba($color: #157ab8, $alpha: 0.2);
+//   backdrop-filter: blur(2px);
+//   backdrop-filter:  blur(2px)s;
+// }
+
+.mobile-navbar {
+  @apply md:hidden sticky bottom-0 w-full h-24  bg-gray-800 bg-opacity-50 backdrop-blur-sm;
+
+  position: fixed;
+  bottom: 0;
+}

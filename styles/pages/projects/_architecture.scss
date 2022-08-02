@@ -1,0 +1,61 @@
+.archontainer {
+  height: 48rem;
+  overflow: scroll;
+
+  .architecture-grid-container {
+    @apply grid 
+      gap-2
+      grid-cols-2
+     
+      sm:grid-cols-2 
+      md:grid-cols-3 
+      lg:grid-cols-3 
+      xl:grid-cols-4 
+      2xl:grid-cols-5
+  
+   
+      mb-28
+      md:mb-6;
+
+    .archi-thumbnail-container {
+      @apply h-64 row-auto rounded-sm;
+      overflow: hidden;
+      position: relative;
+      filter: saturate(40%);
+      transition: all 0.5 ease-in;
+      &:hover {
+        filter: saturate(100%);
+      }
+
+      .thumbnail-image {
+        // @apply ;
+      }
+    }
+  }
+}
+
+.architecture-page {
+  @apply flex flex-col xl:flex-row;
+  height: 42rem;
+  width: 100%;
+  overflow: scroll;
+  // background-color: yellow;
+  // margin-bottom: 2rem;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-around;
+
+  .slider-container {
+    @apply w-slider-small h-slider-small xl:w-slider-full xl:h-slider-full;
+    // width: 42rem;
+    // height: 42rem;
+  }
+
+  .content-container {
+    @apply pl-2 ml-2  border-l-[1px] border-gray-300 dark:border-neutral-700;
+    // width: 50%;
+    // border-left: 1px solid white;
+    height: 100%;
+    overflow: scroll;
+  }
+}
