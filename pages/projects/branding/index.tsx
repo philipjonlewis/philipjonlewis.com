@@ -74,7 +74,20 @@ export async function getStaticProps(context: any) {
     path.join("public/images/projects/branding/thumbnails")
   );
 
-  console.log(imageFilePaths);
+  // imageFilePaths.forEach((file) => {
+  //   fs.writeFile(
+  //     `db/projects/branding/${file.replace(".png", ".md")}`,
+  //     `---\r\nprojectName : "${file.replace(
+  //       ".png",
+  //       ""
+  //     )}"\r\nimageLink : "/images/projects/branding/thumbnails/${file}"\r\n---`,
+  //     (err) => {
+  //       console.log(err);
+  //     }
+  //   );
+  // });
+
+  // console.log(imageFilePaths);
 
   // const cleanedImagedPaths = filteredImagePaths.map((fileName) => {
   //   if (fileName.includes(".jpg")) {
