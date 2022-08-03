@@ -15,30 +15,38 @@ export const ProjectNavbar = () => {
   }, [router.asPath]);
 
   return (
-    <div className="container mt-2 pt-2 pb-2 mb-2 flex justify-start items-center gap-2 border-b-[1px] border-t-[1px] border-gray-300 dark:border-neutral-700">
-      <div
-        className={
-          activePath == "branding" ? "active-sub-nav-link" : "sub-nav-link"
-        }
-      >
-        <Link href={"/projects/branding"}>Branding</Link>
-      </div>
+    <div className="project-navbar-container">
+      <Link href={"/projects/branding"}>
+        <div
+          className={
+            activePath == "branding" ? "active-sub-nav-link" : "sub-nav-link"
+          }
+        >
+          Branding & Graphic Design
+        </div>
+      </Link>
 
-      <div
-        className={
-          activePath == "architecture" ? "active-sub-nav-link" : "sub-nav-link"
-        }
-      >
-        <Link href={"/projects/architecture"}>Architecture</Link>
-      </div>
+      <Link href={"/projects/architecture"}>
+        <div
+          className={
+            activePath == "architecture"
+              ? "active-sub-nav-link"
+              : "sub-nav-link"
+          }
+        >
+          Architecture & Interiors
+        </div>
+      </Link>
 
-      <div
-        className={
-          activePath == "fullstack" ? "active-sub-nav-link" : "sub-nav-link"
-        }
-      >
-        <Link href={"/projects/fullstack"}>Full-Stack Development</Link>
-      </div>
+      <Link href={"/projects/fullstack"}>
+        <div
+          className={
+            activePath == "fullstack" ? "active-sub-nav-link" : "sub-nav-link"
+          }
+        >
+          Full-Stack Development
+        </div>
+      </Link>
     </div>
   );
 };

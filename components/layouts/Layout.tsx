@@ -8,7 +8,7 @@ import Meta from "./Meta";
 import CustomCursor from "../branding/CustomCursor";
 import { motion } from "framer-motion";
 import MobileNavbar from "../navigation/MobileNavbar";
-
+import ThreeJsModel from "../3D/ThreeJsModel";
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
@@ -23,6 +23,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <MobileNavbar />
         <Footer />
       </div>
+      
     </ThemeProvider>
   );
 };

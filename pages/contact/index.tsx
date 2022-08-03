@@ -1,8 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
-
+import ThreeJsModel from "../../components/3D/ThreeJsModel";
 const Contact: NextPage = () => {
-  return <div>Contact</div>;
+  return <div>{/* <ThreeJsModel /> */}</div>;
 };
 
 export default Contact;

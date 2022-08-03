@@ -3,8 +3,10 @@ import type { NextPage } from "next";
 import { annotate, annotationGroup } from "rough-notation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-
 import { ExternalLinkIcon, ArrowRightIcon } from "@heroicons/react/solid";
+import dynamic from "next/dynamic";
+
+// const ComputerModel = dynamic(dynamicOptions: () => import "../components/3D/ThreeJsModel")
 
 const Home: NextPage = () => {
   const myName = useRef() as any;
@@ -83,52 +85,53 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <div className="w-full px-4 md:px-0 mt-16 md:mt-36">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: { opacity: 1, transition: { delay: 0.5 } },
-        }}
-        className=" h-fit flex flex-col justify-center align-start "
-      >
-        <div className="mb-4">
-          <p className="text-xl md:text-3xl font-sans font-semibold">
-            I&#39;m an <span ref={myArchitect}>Architect</span>, a{" "}
-            <span ref={myDesigner}>Designer</span>, and a{" "}
-            <span ref={myEngineer}>Full-Stack Developer</span> <br /> focused on{" "}
-            <span ref={productDesign}>product design & development</span>
-          </p>
-        </div>
+    <>
+      <div className="w-full px-4 md:px-0 mt-16 md:mt-36 relative">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { delay: 0.5 } },
+          }}
+          className=" h-fit flex flex-col justify-center align-start absolute"
+        >
+          <div className="mb-4">
+            <p className="text-xl md:text-3xl font-sans font-semibold">
+              I&#39;m an <span ref={myArchitect}>Architect</span>, a{" "}
+              <span ref={myDesigner}>Designer</span>, and a{" "}
+              <span ref={myEngineer}>Full-Stack Developer</span> <br /> focused
+              on <span ref={productDesign}>product design & development</span>
+            </p>
+          </div>
 
-        <div className="mb-4">
-          <span className="text-sm md:text-md font-semibold">
-            My name is <span ref={myName}>Philip Lewis</span> and I love
-            challenges and building great things.
-          </span>
-        </div>
-        <div className="mb-12 flex justify-center items-center h-6 w-fit text-xs cursor-pointer text-orange-700 dark:text-blue-500">
-          <Link href="/about">
-            <div className="flex justify-center items-center">
-              <p>Read more about me</p>
-              <ArrowRightIcon className="h-4 w-4 ml-2 text-orange-700 dark:text-blue-500" />
-            </div>
-          </Link>
-        </div>
+          <div className="mb-4">
+            <span className="text-sm md:text-md font-semibold">
+              My name is <span ref={myName}>Philip Lewis</span> and I love
+              challenges and building great things.
+            </span>
+          </div>
+          <div className="mb-12 flex justify-center items-center h-6 w-fit text-xs cursor-pointer text-orange-700 dark:text-blue-500">
+            <Link href="/about">
+              <div className="flex justify-center items-center">
+                <p>Read more about me</p>
+                <ArrowRightIcon className="h-4 w-4 ml-2 text-orange-700 dark:text-blue-500" />
+              </div>
+            </Link>
+          </div>
 
-        <div className="mb-12 md:mb-6 w-fit">
-          <p
-            className="text-sm font-semibold dark:text-slate-50"
-            ref={openPosition}
-          >
-            I&#39;m currently looking for a front-end and/or back-end
-            development/engineering position.
-          </p>
-        </div>
-        <div
-          ref={circleButton}
-          className="ml-auto sm:ml-0 w-fit py-4 px-8 text-sm h-12 flex justify-center items-center   rounded-md cursor-pointer border
+          <div className="mb-12 md:mb-6 w-fit">
+            <p
+              className="text-sm font-semibold dark:text-slate-50"
+              ref={openPosition}
+            >
+              I&#39;m currently looking for a front-end and/or back-end
+              development/engineering position.
+            </p>
+          </div>
+          <div
+            ref={circleButton}
+            className="ml-auto sm:ml-0 w-fit py-4 px-8 text-sm h-12 flex justify-center items-center   rounded-md cursor-pointer border
          border-slate-800 
          bg-slate-800 
          text-white
@@ -147,12 +150,13 @@ const Home: NextPage = () => {
        
          
          "
-        >
-          <p className="font-semibold">Let&apos;s Talk!</p>
-          {/* <p className="font-semibold">Let&apos;s Work Together!</p> */}
-        </div>
-      </motion.div>
-    </div>
+          >
+            <p className="font-semibold">Let&apos;s Talk!</p>
+            {/* <p className="font-semibold">Let&apos;s Work Together!</p> */}
+          </div>
+        </motion.div>
+      </div>
+    </>
   );
 };
 
