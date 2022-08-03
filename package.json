@@ -24,8 +24,7 @@
     "rough-notation": "^0.5.1",
     "sharp": "^0.30.7",
     "swiper": "^8.3.2",
-    "three": "^0.143.0",
-    "use-asset": "^1.0.4"
+    "three": "^0.143.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",

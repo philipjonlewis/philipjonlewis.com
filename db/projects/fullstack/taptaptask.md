@@ -15,7 +15,9 @@ techStack:
     "MongoDB",
     "Mongoose",
     "Css + Sass",
+    "Markdown",
   ]
+features: { current: ["authentication server"], future: ["teams"] }
 siteLink: "https://www.taptaptask.com"
 imageLink: "/images/projects/fullstack/taptaptask.png"
 gitHubLinks:

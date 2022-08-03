@@ -26,8 +26,11 @@ const Architecture = ({ imagePaths }) => {
         {imagePaths.map((image, index) => {
           // const imageLink = image.replace(".jpg", "");
           return (
-            <div className="branding-thumbnail-container" key={index}>
-              <Link href={`/projects/branding/${image.replace(".png", "")}`}>
+            <Link
+              href={`/projects/branding/${image.replace(".png", "")}`}
+              key={index}
+            >
+              <div className="branding-thumbnail-container">
                 <a>
                   {/* <img
                     src={`/images/projects/branding/${image}/pure.svg`}
@@ -58,8 +61,8 @@ const Architecture = ({ imagePaths }) => {
                     className="brand-image"
                   /> */}
                 </a>
-              </Link>
-            </div>
+              </div>
+            </Link>
           );
         })}
       </motion.div>
