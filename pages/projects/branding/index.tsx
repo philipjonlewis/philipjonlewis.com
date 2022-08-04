@@ -17,7 +17,7 @@ const Architecture = ({ imagePaths }) => {
 
   return (
     <div>
-      <UtilitiesNavbar />
+      {/* <UtilitiesNavbar /> */}
       <div className="branding-container">
         <motion.div
           variants={container}
@@ -28,43 +28,18 @@ const Architecture = ({ imagePaths }) => {
           {imagePaths.map((image, index) => {
             // const imageLink = image.replace(".jpg", "");
             return (
-              <Link
-                href={`/projects/branding/${image.replace(".png", "")}`}
-                key={index}
-              >
-                <div className="branding-thumbnail-container">
-                  <a>
-                    {/* <img
-                    src={`/images/projects/branding/${image}/pure.svg`}
-                    // layout="fill"
-                    // objectFit="cover"
-                    // //   objectFit="contain"
-                    // objectPosition="center"
-                    alt="image"
-                    className="temp-image"
-                  /> */}
-                    <Image
-                      src={`/images/projects/branding/thumbnails/${image}`}
-                      layout="fixed"
-                      height={200}
-                      width={200}
-                      objectFit="cover"
-                      objectPosition="center"
-                      alt="image"
-                      className="thumb-image"
-                    />
-                    {/* <Image
-                    src={`/images/projects/branding/${image}/colored.svg`}
-                    layout="fill"
-                    objectFit="cover"
-                    //   objectFit="contain"
-                    objectPosition="center"
-                    alt="image"
-                    className="brand-image"
-                  /> */}
-                  </a>
-                </div>
-              </Link>
+              <div className="branding-thumbnail-container" key={index}>
+                <Image
+                  src={`/images/projects/branding/thumbnails/${image}`}
+                  layout="fixed"
+                  height={200}
+                  width={200}
+                  objectFit="cover"
+                  objectPosition="center"
+                  alt="image"
+                  className="thumb-image"
+                />
+              </div>
             );
           })}
         </motion.div>

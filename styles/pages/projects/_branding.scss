@@ -18,7 +18,8 @@
         md:mb-6;
 
     .branding-thumbnail-container {
-      @apply h-64 row-auto rounded-sm flex justify-center items-center hover:bg-gray-100 dark:hover:bg-neutral-800 cursor-pointer;
+      @apply h-64 row-auto rounded-sm flex justify-center items-center hover:shadow-md;
+      // @apply h-64 row-auto rounded-sm flex justify-center items-center hover:bg-gray-100 dark:hover:bg-neutral-800 cursor-pointer;
       overflow: hidden;
       position: relative;
       //   filter: grayscale(100%);

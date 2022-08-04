@@ -1,0 +1,46 @@
+.mobile-navbar {
+  @apply md:hidden overflow-hidden w-full;
+  //   @apply md:hidden sticky bottom-0 w-full h-24  bg-gray-800 bg-opacity-50 backdrop-blur-sm flex justify-around items-center;
+
+  .navbar-proper {
+    @apply grid grid-cols-4 w-full bg-gray-200 dark:bg-neutral-700 backdrop-blur-sm bg-opacity-50 dark:bg-opacity-50;
+    width: 100%;
+    // background-color: green;
+    height: 6rem;
+    position: fixed;
+    bottom: 0;
+
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // align-items: center;
+
+    .mobile-nav-link {
+      @apply flex flex-col justify-center items-center text-slate-600 dark:text-slate-200;
+      // @apply text-sm font-medium text-slate-700 dark:text-slate-50 py-3 px-6  hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer hover:rounded-sm;
+      //   display: inline-block;
+      //   background-color: yellow;
+      height: 100%;
+      width: 100%;
+
+      .mobile-icon {
+        height: 1.4rem;
+      }
+
+      p {
+        @apply text-sm mt-2;
+      }
+    }
+
+    .mobile-active-navlink {
+      @extend .mobile-nav-link;
+      @apply text-orange-600 
+      bg-opacity-80 
+      dark:text-blue-400 
+      bg-gray-100 
+      dark:bg-slate-500 
+      dark:bg-opacity-80
+      font-bold;
+    }
+  }
+}

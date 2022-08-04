@@ -16,7 +16,7 @@ const Architecture = ({ imagePaths }) => {
 
   return (
     <div>
-      <UtilitiesNavbar />
+      {/* <UtilitiesNavbar /> */}
       <div className="archontainer">
         <motion.div
           variants={container}
@@ -28,18 +28,18 @@ const Architecture = ({ imagePaths }) => {
             const imageLink = image.replace(".jpg", "");
             return (
               <div className="archi-thumbnail-container" key={index}>
-                <Link href={`/projects/architecture/${imageLink}`}>
-                  <a>
-                    <Image
-                      src={"/images/projects/architecture/thumbnails/" + image}
-                      layout="fill"
-                      objectFit="cover"
-                      //   objectFit="contain"
-                      objectPosition="center"
-                      alt="image"
-                    />
-                  </a>
-                </Link>
+                {/* <Link href={`/projects/architecture/${imageLink}`}>
+                  <a> */}
+                <Image
+                  src={"/images/projects/architecture/thumbnails/" + image}
+                  layout="fill"
+                  objectFit="cover"
+                  //   objectFit="contain"
+                  objectPosition="center"
+                  alt="image"
+                />
+                {/* </a>
+                </Link> */}
               </div>
             );
           })}

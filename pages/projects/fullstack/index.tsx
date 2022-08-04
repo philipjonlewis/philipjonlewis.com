@@ -97,14 +97,25 @@ const Projects: NextPage<ProjectsPageProps> = ({ projectList }) => {
     if (filterProperties.frontEnd && filterProperties.backEnd) {
       setDisplayProjectList(projectList);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filterProperties]);
 
   return (
     <motion.div className="projects-page">
       {/* <UtilitiesNavbar /> */}
       <div className="project-utilities-navbar">
-        {/* <p>Filter Options</p> */}
+        <p>Filter Options</p>
         <form>
+          <div className="checkbox-container">
+            <input
+              type="checkbox"
+              name="strict"
+              id=""
+              checked={filterProperties.strict}
+              onChange={checkBoxHandler}
+            />
+            <label>Strict</label>
+          </div>
           <div className="checkbox-container">
             <input
               type="checkbox"
@@ -124,16 +135,6 @@ const Projects: NextPage<ProjectsPageProps> = ({ projectList }) => {
               onChange={checkBoxHandler}
             />
             <label>Back-End</label>
-          </div>
-          <div className="checkbox-container">
-            <input
-              type="checkbox"
-              name="strict"
-              id=""
-              checked={filterProperties.strict}
-              onChange={checkBoxHandler}
-            />
-            <label>Strict Filtering</label>
           </div>
         </form>
       </div>
