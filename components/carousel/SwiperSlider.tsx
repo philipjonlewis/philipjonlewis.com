@@ -35,9 +35,9 @@ const SwiperSlider = ({ imageList }) => {
               alt="image"
             />
 
-            <div className="description-container">
+            {/* <div className="description-container">
               <p>amazing</p>
-            </div>
+            </div> */}
           </SwiperSlide>
         );
       })}

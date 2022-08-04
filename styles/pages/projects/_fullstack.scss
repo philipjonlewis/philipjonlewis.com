@@ -1,6 +1,42 @@
 .projects-page {
   @apply mx-4 sm:mx-0;
 
+  .project-utilities-navbar {
+    @apply container pb-3 pt-1 mb-2 flex flex-col justify-center items-start gap-2  rounded-sm border-b-[1px] dark:border-gray-800;
+
+    p {
+      @apply text-xs;
+    }
+
+    @mixin icon-common {
+      @apply cursor-pointer p-1 rounded-lg;
+      .filter-icon {
+        height: 1.4rem;
+      }
+    }
+
+    .filter-icon-container {
+      @include icon-common;
+      @apply bg-gray-100 text-gray-700 dark:bg-gray-600 dark:text-gray-300;
+    }
+
+    .filter-icon-active {
+      @include icon-common;
+      @apply bg-orange-100 text-orange-400 dark:bg-blue-800 dark:text-blue-200;
+    }
+
+    form {
+      @apply flex gap-4;
+      .checkbox-container {
+        @apply flex;
+
+        label {
+          @apply pl-2 text-xs text-gray-500;
+        }
+      }
+    }
+  }
+
   .projects-container {
     @apply grid 
         gap-2
@@ -8,8 +44,8 @@
         sm:grid-cols-2 
         md:grid-cols-2 
         lg:grid-cols-3 
-        xl:grid-cols-4 
-        2xl:grid-cols-5 
+        xl:grid-cols-5
+        2xl:grid-cols-5
         mb-28
         md:mb-6;
 

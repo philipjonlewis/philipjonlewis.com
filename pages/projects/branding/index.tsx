@@ -6,7 +6,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
-
+import UtilitiesNavbar from "../../../components/navigation/UtilitiesNavbar";
 const Architecture = ({ imagePaths }) => {
   const container = {
     hidden: { opacity: 0 },
@@ -16,23 +16,25 @@ const Architecture = ({ imagePaths }) => {
   };
 
   return (
-    <div className="branding-container">
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="branding-grid-container"
-      >
-        {imagePaths.map((image, index) => {
-          // const imageLink = image.replace(".jpg", "");
-          return (
-            <Link
-              href={`/projects/branding/${image.replace(".png", "")}`}
-              key={index}
-            >
-              <div className="branding-thumbnail-container">
-                <a>
-                  {/* <img
+    <div>
+      <UtilitiesNavbar />
+      <div className="branding-container">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="branding-grid-container"
+        >
+          {imagePaths.map((image, index) => {
+            // const imageLink = image.replace(".jpg", "");
+            return (
+              <Link
+                href={`/projects/branding/${image.replace(".png", "")}`}
+                key={index}
+              >
+                <div className="branding-thumbnail-container">
+                  <a>
+                    {/* <img
                     src={`/images/projects/branding/${image}/pure.svg`}
                     // layout="fill"
                     // objectFit="cover"
@@ -41,17 +43,17 @@ const Architecture = ({ imagePaths }) => {
                     alt="image"
                     className="temp-image"
                   /> */}
-                  <Image
-                    src={`/images/projects/branding/thumbnails/${image}`}
-                    layout="fixed"
-                    height={200}
-                    width={200}
-                    objectFit="cover"
-                    objectPosition="center"
-                    alt="image"
-                    className="thumb-image"
-                  />
-                  {/* <Image
+                    <Image
+                      src={`/images/projects/branding/thumbnails/${image}`}
+                      layout="fixed"
+                      height={200}
+                      width={200}
+                      objectFit="cover"
+                      objectPosition="center"
+                      alt="image"
+                      className="thumb-image"
+                    />
+                    {/* <Image
                     src={`/images/projects/branding/${image}/colored.svg`}
                     layout="fill"
                     objectFit="cover"
@@ -60,12 +62,13 @@ const Architecture = ({ imagePaths }) => {
                     alt="image"
                     className="brand-image"
                   /> */}
-                </a>
-              </div>
-            </Link>
-          );
-        })}
-      </motion.div>
+                  </a>
+                </div>
+              </Link>
+            );
+          })}
+        </motion.div>
+      </div>
     </div>
   );
 };

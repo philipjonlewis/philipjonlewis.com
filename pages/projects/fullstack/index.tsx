@@ -11,40 +11,144 @@ import fs from "fs";
 import path from "path";
 import type { ProjectContentFormat } from "../../../types/projects/software/softwareProjectTypes";
 import matter from "gray-matter";
+import { FilterIcon, AdjustmentsIcon } from "@heroicons/react/outline";
+import UtilitiesNavbar from "../../../components/navigation/UtilitiesNavbar";
 
 interface ProjectsPageProps {
   projectList: ProjectContentFormat[];
 }
 
 const Projects: NextPage<ProjectsPageProps> = ({ projectList }) => {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      // transition: {
-      //   staggerChildren: 0.5,
-      // },
-    },
+  const [displayProjectList, setDisplayProjectList] = useState([]);
+  const [filterProperties, setFilterProperties] = useState({
+    frontEnd: false,
+    backEnd: false,
+    strict: false,
+  });
+
+  const { frontEnd, backEnd, strict } = filterProperties;
+
+  const [displayFilterControl, setDisplayFilterControl] = useState(
+    false
+  ) as any;
+
+  useEffect(() => {
+    setDisplayProjectList(projectList);
+  }, []);
+
+  const checkBoxHandler = (e) => {
+    setFilterProperties((state) => {
+      return { ...state, [e.target.name]: e.target.checked };
+    });
   };
 
-  const item = {
-    // hidden: { opacity: 0, y: -50 },
-    show: {
-      opacity: 1,
-      // y: 0,
-      // transition: { type: "spring" },
-    },
-  };
+  useEffect(() => {
+    const filteredList = projectList
+      ?.map((project) => {
+        const { frontEnd, backEnd, strict } = filterProperties;
+        let isFrontEnd = false;
+        let isBackEnd = false;
+
+        project?.frontMatter?.gitHubLinks?.map((link) => {
+          if (link?.name == "Front-End") {
+            isFrontEnd = true;
+          }
+
+          if (link?.name == "Back-End") {
+            isBackEnd = true;
+          }
+
+          if (link?.name == "Full-Stack") {
+            isFrontEnd = true;
+            isBackEnd = true;
+          }
+        });
+
+        // Non Strict
+        if (!strict && frontEnd && isFrontEnd) {
+          return project;
+        }
+        if (!strict && backEnd && isBackEnd) {
+          return project;
+        }
+
+        // Non Strict
+
+        //  Strict
+        if (strict && frontEnd && !isBackEnd && isFrontEnd && !isBackEnd) {
+          return project;
+        }
+        if (strict && backEnd && !frontEnd && isBackEnd && !isFrontEnd) {
+          return project;
+        }
+
+        //  Strict
+      })
+      .filter((el) => {
+        return el !== undefined;
+      });
+
+    if (filteredList.length >= 1) {
+      setDisplayProjectList(filteredList);
+    } else {
+      setDisplayProjectList(projectList);
+    }
+
+    if (filterProperties.frontEnd && filterProperties.backEnd) {
+      setDisplayProjectList(projectList);
+    }
+  }, [filterProperties]);
 
   return (
     <motion.div className="projects-page">
+      {/* <UtilitiesNavbar /> */}
+      <div className="project-utilities-navbar">
+        {/* <p>Filter Options</p> */}
+        <form>
+          <div className="checkbox-container">
+            <input
+              type="checkbox"
+              name="frontEnd"
+              id=""
+              checked={filterProperties.frontEnd}
+              onChange={checkBoxHandler}
+            />
+            <label>Front End</label>
+          </div>
+          <div className="checkbox-container">
+            <input
+              type="checkbox"
+              name="backEnd"
+              id=""
+              checked={filterProperties.backEnd}
+              onChange={checkBoxHandler}
+            />
+            <label>Back-End</label>
+          </div>
+          <div className="checkbox-container">
+            <input
+              type="checkbox"
+              name="strict"
+              id=""
+              checked={filterProperties.strict}
+              onChange={checkBoxHandler}
+            />
+            <label>Strict Filtering</label>
+          </div>
+        </form>
+      </div>
       <motion.div
-        variants={container}
+        variants={{
+          hidden: { opacity: 0 },
+          show: {
+            opacity: 1,
+          },
+        }}
         initial="hidden"
         animate="show"
         className="projects-container"
       >
-        {projectList?.map((project: ProjectContentFormat) => {
+        {displayProjectList?.map((project: ProjectContentFormat) => {
           const {
             projectId,
             projectName,
@@ -57,7 +161,11 @@ const Projects: NextPage<ProjectsPageProps> = ({ projectList }) => {
           } = project.frontMatter;
           return (
             <motion.div
-              variants={item}
+              variants={{
+                show: {
+                  opacity: 1,
+                },
+              }}
               className="project-card"
               key={projectId}
             >

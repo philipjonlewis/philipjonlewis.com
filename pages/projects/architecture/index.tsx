@@ -5,7 +5,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
-
+import UtilitiesNavbar from "../../../components/navigation/UtilitiesNavbar";
 const Architecture = ({ imagePaths }) => {
   const container = {
     hidden: { opacity: 0 },
@@ -15,33 +15,36 @@ const Architecture = ({ imagePaths }) => {
   };
 
   return (
-    <div className="archontainer">
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="architecture-grid-container"
-      >
-        {imagePaths.map((image, index) => {
-          const imageLink = image.replace(".jpg", "");
-          return (
-            <div className="archi-thumbnail-container" key={index}>
-              <Link href={`/projects/architecture/${imageLink}`}>
-                <a>
-                  <Image
-                    src={"/images/projects/architecture/thumbnails/" + image}
-                    layout="fill"
-                    objectFit="cover"
-                    //   objectFit="contain"
-                    objectPosition="center"
-                    alt="image"
-                  />
-                </a>
-              </Link>
-            </div>
-          );
-        })}
-      </motion.div>
+    <div>
+      <UtilitiesNavbar />
+      <div className="archontainer">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="architecture-grid-container"
+        >
+          {imagePaths.map((image, index) => {
+            const imageLink = image.replace(".jpg", "");
+            return (
+              <div className="archi-thumbnail-container" key={index}>
+                <Link href={`/projects/architecture/${imageLink}`}>
+                  <a>
+                    <Image
+                      src={"/images/projects/architecture/thumbnails/" + image}
+                      layout="fill"
+                      objectFit="cover"
+                      //   objectFit="contain"
+                      objectPosition="center"
+                      alt="image"
+                    />
+                  </a>
+                </Link>
+              </div>
+            );
+          })}
+        </motion.div>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 ---
 projectId: 1
 projectName: "TapTapTask"
-projectDescription: "taptaptask is a task management tool for phase-based projects. CRUD REST API Backend made with node + express --fix this description"
+projectDescription: "A task management tool for phase-based projects."
 techStack:
   [
     "Typescript",
@@ -15,9 +15,18 @@ techStack:
     "MongoDB",
     "Mongoose",
     "Css + Sass",
-    "Markdown",
   ]
-features: { current: ["authentication server"], future: ["teams"] }
+features:
+  {
+    current:
+      [
+        "Authentication server",
+        "Phase organizer",
+        "Organize tasks by date",
+        "Lapsed tasks history",
+      ],
+    future: ["Teams", "Batch adjust task deadline", "Project Organizer", "App"],
+  }
 siteLink: "https://www.taptaptask.com"
 imageLink: "/images/projects/fullstack/taptaptask.png"
 gitHubLinks:

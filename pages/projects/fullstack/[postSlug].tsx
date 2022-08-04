@@ -13,7 +13,7 @@ const SoftwarePost = ({
   content,
 }) => {
   const router = useRouter();
-
+  console.log(postSlug);
   return (
     <div className="fullstack-page">
       {/* <button onClick={() => router.back()}>Go Back</button> */}
@@ -23,8 +23,8 @@ const SoftwarePost = ({
             // "/images/projects/fullstack/archestimator.png",
             // "/images/projects/fullstack/authserver.png",
             // "/images/projects/fullstack/philipjonlewis.png",
-            "/images/projects/fullstack/quicknotes.png",
-            "/images/projects/fullstack/taptaptask.png",
+            // "/images/projects/fullstack/quicknotes.png",
+            `/images/projects/fullstack/${postSlug}.png`,
             // "/images/projects/fullstack/giphy.gif",
           ]}
         />
@@ -51,14 +51,14 @@ const SoftwarePost = ({
           <div className="features-container">
             <p className="features-title">Features</p>
             <ul>
-              <li>
+              <li className="pb-2">
                 <p className="sub-li-title">Current</p>
                 {features?.current?.map((stack, index) => {
                   return <li key={index}>- {stack}</li>;
                 })}
               </li>
               <li>
-                <p className="sub-li-title">Future</p>
+                <p className="sub-li-title">Upcoming</p>
                 {features?.future?.map((stack, index) => {
                   return <li key={index}>- {stack}</li>;
                 })}
@@ -99,9 +99,15 @@ export async function getStaticProps({ params: { postSlug } }) {
     "utf-8"
   );
 
+  const imagePaths = fs.readdirSync(
+    path.join("./public/images/projects/fullstack")
+  );
+
+  console.log(imagePaths);
+
   const { data: frontMatter, content } = matter(markdownWithMeta);
 
   return {
-    props: { postSlug, frontMatter, content },
+    props: { postSlug, frontMatter, content, imagePaths },
   };
 }
