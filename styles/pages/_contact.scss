@@ -1,11 +1,11 @@
 .contact-page-container {
-  @apply container flex flex-col justify-start items-center;
+  @apply container flex flex-col-reverse md:flex-col h-contact-mobile md:h-auto justify-start items-center;
 
-  .contact-details-container {
+  .contact-slider-container {
     @apply flex flex-col justify-center items-center;
 
     .slide-text-container {
-      @apply flex justify-center items-center mr-2 text-sm text-lime-600;
+      @apply flex justify-center items-center mr-2 text-sm text-lime-600 dark:text-lime-200;
       animation: shake 10s ease infinite;
 
       svg {
@@ -15,7 +15,41 @@
     }
 
     .notice {
-      @apply text-xs text-neutral-500;
+      @apply text-xs text-neutral-500 dark:text-neutral-50 pb-4 md:pb-0;
+    }
+  }
+
+  .contact-details {
+    @apply pt-8 mt-8 md:border-t-[1px] pb-8 md:pb-0;
+    .label-text {
+      p:nth-of-type(1) {
+        @apply text-xs pb-1 text-gray-400;
+      }
+      p:nth-of-type(2) {
+        @apply text-sm;
+      }
+    }
+
+    .copy-email-container {
+      @apply flex justify-between pt-2 mt-2;
+      svg {
+        height: 1.2rem;
+      }
+
+      p {
+        @apply text-xs pt-1;
+      }
+
+      @mixin email-btn-common {
+        @apply rounded-lg p-2 flex flex-col justify-start items-center bg-gray-100 text-gray-800 dark:text-gray-100 dark:bg-gray-800 hover:-translate-y-0.5 cursor-pointer transition-all;
+      }
+
+      .email {
+        @include email-btn-common;
+      }
+      .copy {
+        @include email-btn-common;
+      }
     }
   }
 

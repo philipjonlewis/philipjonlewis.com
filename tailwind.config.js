@@ -22,6 +22,7 @@ module.exports = {
       height: {
         "slider-full": "42rem",
         "slider-small": "100vh",
+        "contact-mobile": "32rem",
       },
     },
     container: {

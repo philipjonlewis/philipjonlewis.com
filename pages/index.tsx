@@ -151,7 +151,9 @@ const Home: NextPage = () => {
          
          "
         >
-          <p className="font-semibold">Let&apos;s Talk!</p>
+          <Link href="/contact" className="font-semibold">
+            Let&apos;s Talk!
+          </Link>
           {/* <p className="font-semibold">Let&apos;s Work Together!</p> */}
         </div>
       </motion.div>

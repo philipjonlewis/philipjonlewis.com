@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { HomeIcon, ArrowRightIcon } from "@heroicons/react/outline";
+import {
+  HomeIcon,
+  ArrowRightIcon,
+  MailOpenIcon,
+  ClipboardCopyIcon,
+} from "@heroicons/react/outline";
+import { toast } from "react-toastify";
 
 const Contact: NextPage = () => {
   // const [motionVaue, setMotionValue] = useState(0);
@@ -32,13 +38,8 @@ const Contact: NextPage = () => {
           dragElastic={0}
           dragConstraints={{ left: 0, right: 94 }}
           dragMomentum={false}
-          onTap={() => {
-            // x.current = 90;
-            console.log("hello");
-          }}
           onDrag={(e, info) => {
             if (x.current >= 90) {
-              console.log("wild");
               setIsContactRevealed(true);
             } else if (x.current <= 50) {
               setIsContactRevealed(false);
@@ -50,11 +51,52 @@ const Contact: NextPage = () => {
       </motion.div>
 
       {isContactRevealed ? (
-        <div>
-          <p>Show contact details</p>
+        <div className="contact-details">
+          <div className="label-text">
+            <p>Email Address</p>
+            <p>philipjonlewis@gmail.com</p>
+          </div>
+          <div className="copy-email-container">
+            <div
+              className="copy"
+              onClick={() => {
+                navigator.clipboard.writeText("philipjonlewis@gmail.com");
+                toast.info("Email copied to your clipboard", {
+                  position: "top-center",
+                  autoClose: 10000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                });
+              }}
+            >
+              <ClipboardCopyIcon />
+              <p>Copy Email</p>
+            </div>
+            <a
+              href="mailto:philipjonlewis@gmail.com"
+              className="email"
+              onClick={() => {
+                toast.info("Opening your email app", {
+                  position: "top-center",
+                  autoClose: 10000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                });
+              }}
+            >
+              <MailOpenIcon />
+              <p>Send Email</p>
+            </a>
+          </div>
         </div>
       ) : (
-        <div className="contact-details-container">
+        <div className="contact-slider-container">
           <span className="slide-text-container">
             Slide <ArrowRightIcon />
           </span>

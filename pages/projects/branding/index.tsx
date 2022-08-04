@@ -10,17 +10,17 @@ import UtilitiesNavbar from "../../../components/navigation/UtilitiesNavbar";
 import { toast } from "react-toastify";
 
 const Architecture = ({ imagePaths }) => {
-  useEffect(() => {
-    // toast.warning("🏗️ - This section is under construction", {
-    //   position: "top-center",
-    //   autoClose: 10000,
-    //   hideProgressBar: false,
-    //   closeOnClick: true,
-    //   pauseOnHover: true,
-    //   draggable: true,
-    //   progress: undefined,
-    // });
-  }, []);
+  // useEffect(() => {
+  //   toast.warning("🏗️ - This section is under construction", {
+  //     position: "top-center",
+  //     autoClose: 10000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //   });
+  // }, []);
 
   return (
     <div>
