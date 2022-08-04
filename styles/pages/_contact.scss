@@ -1,0 +1,55 @@
+.contact-page-container {
+  @apply container flex flex-col justify-start items-center;
+
+  .contact-details-container {
+    @apply flex flex-col justify-center items-center;
+
+    .slide-text-container {
+      @apply flex justify-center items-center mr-2 text-sm text-lime-600;
+      animation: shake 10s ease infinite;
+
+      svg {
+        @apply ml-1;
+        height: 1rem;
+      }
+    }
+
+    .notice {
+      @apply text-xs text-neutral-500;
+    }
+  }
+
+  .drag-container {
+    @apply rounded-full border flex justify-start items-center scale-75 shadow-md;
+    width: 10rem;
+    height: 4rem;
+    padding: 0.1rem;
+
+    .draggable {
+      @apply rounded-full flex justify-center items-center shadow-md  bg-white border border-neutral-200;
+      //   background-color: red;
+      width: 3.8rem;
+      height: 3.8rem;
+    }
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}

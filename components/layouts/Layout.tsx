@@ -8,11 +8,14 @@ import Meta from "./Meta";
 import CustomCursor from "../branding/CustomCursor";
 import { motion } from "framer-motion";
 import MobileNavbar from "../navigation/MobileNavbar";
-import ThreeJsModel from "../3D/ThreeJsModel";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
-      {/* <CustomCursor /> */}
+      <ToastContainer />
+
       <Meta />
       <div className=" ">
         <Header />
@@ -23,7 +26,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <MobileNavbar />
         <Footer />
       </div>
-      
     </ThemeProvider>
   );
 };

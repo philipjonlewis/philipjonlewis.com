@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import fs from "fs";
@@ -7,20 +7,31 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 import UtilitiesNavbar from "../../../components/navigation/UtilitiesNavbar";
+import { toast } from "react-toastify";
+
 const Architecture = ({ imagePaths }) => {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-    },
-  };
+  useEffect(() => {
+    // toast.warning("🏗️ - This section is under construction", {
+    //   position: "top-center",
+    //   autoClose: 10000,
+    //   hideProgressBar: false,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   progress: undefined,
+    // });
+  }, []);
 
   return (
     <div>
-      {/* <UtilitiesNavbar /> */}
       <div className="branding-container">
         <motion.div
-          variants={container}
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+            },
+          }}
           initial="hidden"
           animate="show"
           className="branding-grid-container"

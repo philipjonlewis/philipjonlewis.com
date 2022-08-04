@@ -104,7 +104,7 @@ const Projects: NextPage<ProjectsPageProps> = ({ projectList }) => {
     <motion.div className="projects-page">
       {/* <UtilitiesNavbar /> */}
       <div className="project-utilities-navbar">
-        <p>Filter Options</p>
+        <p>Filter Projects</p>
         <form>
           <div className="checkbox-container">
             <input

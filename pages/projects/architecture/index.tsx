@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import fs from "fs";
@@ -6,20 +6,31 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 import UtilitiesNavbar from "../../../components/navigation/UtilitiesNavbar";
+import { ToastContainer, toast } from "react-toastify";
+
 const Architecture = ({ imagePaths }) => {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-    },
-  };
+  useEffect(() => {
+    // toast.warning("🏗️ - More features coming soon!", {
+    //   position: "top-center",
+    //   autoClose: 10000,
+    //   hideProgressBar: false,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   progress: undefined,
+    // });
+  }, []);
 
   return (
     <div>
-      {/* <UtilitiesNavbar /> */}
       <div className="archontainer">
         <motion.div
-          variants={container}
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+            },
+          }}
           initial="hidden"
           animate="show"
           className="architecture-grid-container"
