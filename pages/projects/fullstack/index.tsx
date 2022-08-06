@@ -11,7 +11,12 @@ import fs from "fs";
 import path from "path";
 import type { ProjectContentFormat } from "../../../types/projects/software/softwareProjectTypes";
 import matter from "gray-matter";
-import { FilterIcon, AdjustmentsIcon } from "@heroicons/react/outline";
+import {
+  FilterIcon,
+  AdjustmentsIcon,
+  FolderOpenIcon,
+  FolderIcon,
+} from "@heroicons/react/outline";
 import UtilitiesNavbar from "../../../components/navigation/UtilitiesNavbar";
 
 interface ProjectsPageProps {
@@ -106,7 +111,7 @@ const Projects: NextPage<ProjectsPageProps> = ({ projectList }) => {
       <div className="project-utilities-navbar">
         <p>Filter Projects</p>
         <form>
-          <div className="checkbox-container">
+          <div className="checkbox-container strict-container">
             <input
               type="checkbox"
               name="strict"
@@ -114,7 +119,7 @@ const Projects: NextPage<ProjectsPageProps> = ({ projectList }) => {
               checked={filterProperties.strict}
               onChange={checkBoxHandler}
             />
-            <label>Strict</label>
+            <label htmlFor="strict">Strict Filtering</label>
           </div>
           <div className="checkbox-container">
             <input

@@ -22,7 +22,8 @@ export const ProjectNavbar = () => {
             activePath == "branding" ? "active-sub-nav-link" : "sub-nav-link"
           }
         >
-          Branding & Graphic Design
+          Branding{" "}
+          <span className="hidden md:inline-block"> & Graphic Design</span>
         </div>
       </Link>
 
@@ -34,7 +35,8 @@ export const ProjectNavbar = () => {
               : "sub-nav-link"
           }
         >
-          Architecture & Interiors
+          Architecture
+          <span className="hidden md:inline-block"> & Interiors</span>
         </div>
       </Link>
 

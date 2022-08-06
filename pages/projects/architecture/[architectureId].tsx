@@ -9,7 +9,7 @@ const ArchitecturePage = ({
   frontMatter: { projectName, location },
   content,
 }) => {
-  console.log(architectureId);
+  // console.log(architectureId);
   return (
     <div className="architecture-page">
       <div className="slider-container">
@@ -55,6 +55,8 @@ export async function getStaticProps({ params: { architectureId } }) {
     path.join("db/projects/architecture", architectureId + ".md"),
     "utf-8"
   );
+
+  console.log("what", gifPaths);
 
   const { data: frontMatter, content } = matter(markdownWithMeta);
 

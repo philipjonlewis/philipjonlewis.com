@@ -6,7 +6,7 @@
     @apply grid grid-cols-4 w-full bg-gray-200 dark:bg-neutral-700 backdrop-blur-sm bg-opacity-50 dark:bg-opacity-50;
     width: 100%;
     // background-color: green;
-    height: 6rem;
+    height: 5rem;
     position: fixed;
     bottom: 0;
 
@@ -16,7 +16,7 @@
     // align-items: center;
 
     .mobile-nav-link {
-      @apply flex flex-col justify-center items-center text-slate-600 dark:text-slate-200;
+      @apply flex flex-col justify-center items-center text-slate-600 dark:text-slate-200 cursor-pointer;
       // @apply text-sm font-medium text-slate-700 dark:text-slate-50 py-3 px-6  hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer hover:rounded-sm;
       //   display: inline-block;
       //   background-color: yellow;

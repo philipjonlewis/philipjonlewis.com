@@ -17,27 +17,28 @@ const SwiperSlider = ({ imageList }) => {
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
       className="swiper"
       //   virtual={true}
     >
-      {imageList?.map((image, index) => {
+      {imageList?.map(({ imagePath, imageDescription }, index) => {
         return (
           <SwiperSlide key={index}>
-            <Image
-              src={image}
-              layout="fill"
-              objectFit="cover"
-              //   objectFit="contain"
-              objectPosition="center"
-              className={"image"}
-              alt="image"
-            />
+            <div className="image-parent">
+              <Image
+                src={imagePath}
+                layout="fill"
+                objectFit="contain"
+                objectPosition={"top"}
+                alt="image"
+              />
 
-            {/* <div className="description-container">
-              <p>amazing</p>
-            </div> */}
+              <div className="description-container">
+                <p>{imageDescription.title}</p>
+                <p>{imageDescription.desc}</p>
+              </div>
+            </div>
           </SwiperSlide>
         );
       })}

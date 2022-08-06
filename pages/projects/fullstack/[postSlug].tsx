@@ -1,32 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { useRouter } from "next/router";
 import Image from "next/image";
-
 import ReactMarkdown from "react-markdown";
 import SwiperSlider from "../../../components/carousel/SwiperSlider";
 const SoftwarePost = ({
   postSlug,
-  frontMatter: { projectName, projectDescription, techStack, features },
+  frontMatter: {
+    projectName,
+    projectDescription,
+    techStack,
+    features,
+    carouselImages,
+  },
   content,
+  gifRoutePaths,
 }) => {
   const router = useRouter();
-  console.log(postSlug);
+
   return (
     <div className="fullstack-page">
       {/* <button onClick={() => router.back()}>Go Back</button> */}
       <div className="slider-container">
         <SwiperSlider
-          imageList={[
-            // "/images/projects/fullstack/archestimator.png",
-            // "/images/projects/fullstack/authserver.png",
-            // "/images/projects/fullstack/philipjonlewis.png",
-            // "/images/projects/fullstack/quicknotes.png",
-            `/images/projects/fullstack/${postSlug}.png`,
-            // "/images/projects/fullstack/giphy.gif",
-          ]}
+          imageList={carouselImages}
+          // imageList={[
+          //   // "/images/projects/fullstack/archestimator.png",
+          //   // "/images/projects/fullstack/authserver.png",
+          //   // "/images/projects/fullstack/philipjonlewis.png",
+          //   // "/images/projects/fullstack/quicknotes.png",
+          //   `/images/projects/fullstack/${postSlug}/01-Landing.png`,
+          //   `/images/projects/fullstack/${postSlug}/02-SignUp.gif`,
+          //   // "/images/projects/fullstack/giphy.gif",
+          // ]}
         />
       </div>
       <div className="content-container">
@@ -99,15 +107,32 @@ export async function getStaticProps({ params: { postSlug } }) {
     "utf-8"
   );
 
-  const imagePaths = fs.readdirSync(
-    path.join("./public/images/projects/fullstack")
-  );
+  // console.log("islug", postSlug);
 
-  console.log(imagePaths);
+  // const imagePaths = fs.readdirSync(
+  //   path.join("./public/images/projects/fullstack")
+  // );
+
+  // const gifNames = fs
+  //   .readdirSync(path.join(`./public/images/projects/fullstack/${postSlug}`))
+  //   .sort((a, b) => {
+  //     return a.localeCompare(b, undefined, {
+  //       numeric: true,
+  //       sensitivity: "base",
+  //     });
+  //   });
+
+  // console.log(gifNames);
+
+  // const gifRoutePaths = gifNames.map((name) => {
+  //   return `/images/projects/fullstack/taptaptask/${name}`;
+  // });
+
+  // console.log(gifRoutePaths);
 
   const { data: frontMatter, content } = matter(markdownWithMeta);
 
   return {
-    props: { postSlug, frontMatter, content, imagePaths },
+    props: { postSlug, frontMatter, content },
   };
 }

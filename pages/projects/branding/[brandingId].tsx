@@ -9,7 +9,7 @@ const ArchitecturePage = ({
   frontMatter: { projectName, imageLink },
   content,
 }) => {
-  console.log(brandingId);
+  // console.log(brandingId);
   return (
     <div className="architecture-page">
       <div className="slider-container">
