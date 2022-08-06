@@ -35,7 +35,7 @@ export const ProjectNavbar = () => {
               : "sub-nav-link"
           }
         >
-          Architecture
+          Architecture{" "}
           <span className="hidden md:inline-block"> & Interiors</span>
         </div>
       </Link>

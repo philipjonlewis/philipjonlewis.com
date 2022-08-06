@@ -164,77 +164,103 @@
   }
 }
 
+.fullstack-nav {
+  @apply container mx-2 sm:mx-0 pb-2  mb-2 flex justify-between items-center gap-2   border-b-[1px] dark:border-gray-800;
+
+  .go-back {
+    @apply cursor-pointer flex justify-center items-center text-orange-600 dark:text-blue-600 hover:bg-gray-100 hover:dark:bg-gray-800 py-1 px-2 rounded-sm;
+    svg {
+      height: 1.2rem;
+    }
+
+    p {
+      @apply ml-1 text-xs;
+    }
+  }
+
+  .crumbs-container {
+    @apply text-xs text-gray-400 dark:text-gray-500  mr-2;
+  }
+}
+
+.fullstack-title {
+  @apply container mx-2 sm:mx-0 my-4  flex flex-col justify-center items-start dark:border-gray-800;
+
+  p:nth-of-type(1) {
+    @apply text-3xl font-bold;
+  }
+
+  p:nth-of-type(2) {
+    @apply text-sm text-gray-700 dark:text-gray-200;
+  }
+}
+
+// xl:flex-row
+// h-full
+// xl:h-slider-full;
+// // height: 42rem;
+
 .fullstack-page {
-  @apply flex flex-col xl:flex-row;
-  height: 42rem;
-  width: 100%;
-  overflow: scroll;
-  // background-color: yellow;
-  // margin-bottom: 2rem;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-around;
+  @apply container 
+  mx-2 
+  mb-24
+  xl:mb-0
+  xl:mx-0;
 
   .slider-container {
-    @apply w-slider-small h-slider-small xl:w-slider-full xl:h-slider-full;
-    // width: 42rem;
-    // height: 42rem;
-    width: 70%;
+    @apply mb-4 
+    container 
+    relative 
+    h-64 
+    md:h-slider-medium 
+    lg:h-slider-large
+    xl:h-slider-xl  bg-neutral-900;
 
-    .image-parent {
-      @apply w-full h-full relative bg-neutral-900;
+    .description-container {
+      @apply bg-neutral-800;
 
-      .description-container {
-        @apply bg-neutral-800;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 10rem;
+      // background-color: white;
+      // opacity: 40%;
+      transition: all 0.2s ease-out;
+      transform: translateY(4rem);
+      padding: 0.5rem;
+      background-color: rgba(38, 38, 38, 0.4);
+      &:hover {
+        background-color: rgba(38, 38, 38, 0.8);
+        transform: translateY(0);
+      }
 
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 10rem;
-        // background-color: white;
-        // opacity: 40%;
-        transition: all 0.2s ease-out;
-        transform: translateY(4rem);
-        padding: 0.5rem;
-        background-color: rgba(38, 38, 38, 0.4);
-        &:hover {
-          background-color: rgba(38, 38, 38, 0.8);
-          transform: translateY(0);
-        }
+      p {
+        @apply text-neutral-800 dark:text-neutral-200 text-white;
+      }
 
-        p {
-          @apply text-neutral-800 dark:text-neutral-200 text-white;
-        }
+      p:nth-of-type(1) {
+        @apply text-lg font-bold border-b-[1px] w-fit pb-1 mb-1;
+      }
 
-        p:nth-of-type(1) {
-          @apply text-lg font-bold border-b-[1px] w-fit pb-1 mb-1;
-        }
-
-        p:nth-of-type(2) {
-          @apply text-sm;
-        }
+      p:nth-of-type(2) {
+        @apply text-sm;
       }
     }
   }
 
   .content-container {
-    @apply pl-2 ml-2  border-l-[1px] border-gray-300 dark:border-neutral-700;
-    // width: 50%;
-    // border-left: 1px solid white;
-    height: 100%;
-    overflow: scroll;
-    width: 30%;
+    @apply container sm:px-0;
 
     @mixin title-style {
-      @apply text-sm text-rose-500 dark:text-lime-500 font-semibold mb-1;
+      @apply text-lg font-bold pb-1;
     }
 
     @mixin subtitle-style {
-      @apply text-xs text-green-700 dark:text-yellow-500 mb-1 pl-2;
+      @apply text-sm font-bold text-green-700 dark:text-yellow-500 mb-1;
     }
 
     @mixin content-style {
-      @apply text-sm pl-2;
+      @apply inline-flex flex-wrap gap-1;
     }
 
     .title-container {
@@ -257,12 +283,15 @@
       }
     }
     .tech-stack-container {
-      @apply mb-2 pb-2 pr-2 mr-2 border-r-[1px];
+      @apply mb-4 pb-4  border-b-[1px];
       p:first-of-type {
         @include title-style;
       }
       ul {
         @include content-style;
+        li {
+          @apply text-sm bg-slate-100 dark:bg-neutral-700 px-4 py-1 rounded-full h-fit min-w-fit;
+        }
       }
     }
     .features-container {
@@ -273,13 +302,16 @@
       }
 
       ul {
+        @apply sm:flex justify-start;
         li {
+          @apply pr-2;
           .sub-li-title {
             @include subtitle-style;
           }
 
           li {
-            @include content-style;
+            // @include content-style;
+            @apply flex-col;
 
             // color: red;
           }

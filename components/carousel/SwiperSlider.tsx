@@ -25,20 +25,20 @@ const SwiperSlider = ({ imageList }) => {
       {imageList?.map(({ imagePath, imageDescription }, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className="image-parent">
-              <Image
-                src={imagePath}
-                layout="fill"
-                objectFit="contain"
-                objectPosition={"top"}
-                alt="image"
-              />
-
-              <div className="description-container">
-                <p>{imageDescription.title}</p>
-                <p>{imageDescription.desc}</p>
-              </div>
-            </div>
+            {/* <div className="image-parent"> */}
+            <Image
+              src={imagePath}
+              layout="fill"
+              objectFit="contain"
+              objectPosition={"top"}
+              alt="image"
+            />
+            {/* 
+            <div className="description-container">
+              <p>{imageDescription.title}</p>
+              <p>{imageDescription.desc}</p>
+            </div> */}
+            {/* </div> */}
           </SwiperSlide>
         );
       })}

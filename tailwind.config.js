@@ -23,6 +23,10 @@ module.exports = {
         "slider-full": "42rem",
         "slider-small": "100vh",
         "contact-mobile": "32rem",
+        "slider-sm": "25rem",
+        "slider-medium": "32rem",
+        "slider-large": "40rem",
+        "slider-xl": "49rem",
       },
     },
     container: {
