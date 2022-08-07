@@ -16,6 +16,7 @@ techStack:
     "Mongoose",
     "Css + Sass",
   ]
+adminAuth: { email: "guest@email.com", password: "SamplePassword888!" }
 features:
   {
     current:

@@ -164,6 +164,7 @@ const Projects: NextPage<ProjectsPageProps> = ({ projectList }) => {
             siteLink,
             imageLink,
             status,
+            adminAuth,
           } = project.frontMatter;
           return (
             <motion.div
@@ -200,6 +201,12 @@ const Projects: NextPage<ProjectsPageProps> = ({ projectList }) => {
                 <div className="description-container">
                   <p>{projectDescription}</p>
                   {/* <p>Read More...</p> */}
+                  {adminAuth?.email && (
+                    <ul>
+                      <li>email : {adminAuth.email}</li>
+                      <li>password: {adminAuth.password}</li>
+                    </ul>
+                  )}
                 </div>
 
                 {/* <div className="page-link-container">

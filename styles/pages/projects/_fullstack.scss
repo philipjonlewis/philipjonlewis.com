@@ -102,6 +102,12 @@
           p:nth-of-type(2) {
             @apply text-right text-xs mt-2;
           }
+
+          ul {
+            li {
+              @apply text-xs;
+            }
+          }
         }
 
         .page-link-container {

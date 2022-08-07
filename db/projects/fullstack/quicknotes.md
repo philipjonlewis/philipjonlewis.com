@@ -11,6 +11,7 @@ techStack:
     "Css + Sass",
     "Firebase + Firestore",
   ]
+adminAuth: { email: "guest@email.com", password: "SamplePassword888!" }
 siteLink: "https://quicknotesbyphilip.netlify.app"
 imageLink: "/images/projects/fullstack/quicknotes.png"
 gitHubLinks:
