@@ -1,7 +1,7 @@
 ---
 projectId: 4
 projectName: "Archestimator"
-projectDescription: "archestimator is a construction cost estimator for architects."
+projectDescription: "An architectural cost estimator for architects & interior designers"
 techStack: ["Typescript", "Svelte", "Vite", "Css + Sass", "Rollup", "Supabase"]
 siteLink: "https://www.archestimator.com"
 imageLink: "/images/projects/fullstack/archestimator.png"
@@ -12,7 +12,7 @@ gitHubLinks:
       link: "https://github.com/philipjonlewis/archestimator.github.io",
     },
   ]
-status: "Development"
+status: "Ongoing Development"
 ---
 
 ## Hello

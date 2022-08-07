@@ -1,7 +1,7 @@
 ---
 projectId: 5
 projectName: "Philip Lewis Portfolio"
-projectDescription: "philipjonlewis portfolio website"
+projectDescription: "A personal and professional portfolio made with NextJS"
 techStack:
   [
     "Typescript",

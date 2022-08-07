@@ -40,7 +40,7 @@ gitHubLinks:
       link: "https://github.com/philipjonlewis/taptaptask_backend",
     },
   ]
-status: "Production"
+status: "Portfolio Project"
 carouselImages:
   [
     {

@@ -202,7 +202,7 @@ const Projects: NextPage<ProjectsPageProps> = ({ projectList }) => {
                   {/* <p>Read More...</p> */}
                 </div>
 
-                <div className="page-link-container">
+                {/* <div className="page-link-container">
                   <Link href={`/projects/fullstack/${project.slug}`}>
                     <span>
                       <p>Read More</p>
@@ -222,7 +222,7 @@ const Projects: NextPage<ProjectsPageProps> = ({ projectList }) => {
                       </svg>
                     </span>
                   </Link>
-                </div>
+                </div> */}
 
                 <div className="tech-stack-container">
                   {techStack?.map((stack, index) => {

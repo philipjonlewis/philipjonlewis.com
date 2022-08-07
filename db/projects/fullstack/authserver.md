@@ -1,7 +1,7 @@
 ---
 projectId: 3
 projectName: "Authentication Server"
-projectDescription: "Standard authentication server made with nodeJS+express."
+projectDescription: "Authentication server with JWT Cookie implementation & CSRF protection  made with NodeJS + ExpressJS."
 techStack:
   [
     "Typescript",
@@ -21,7 +21,7 @@ gitHubLinks:
       link: "https://github.com/philipjonlewis/authentication_server",
     },
   ]
-status: "Development"
+status: "Ongoing Development"
 ---
 
 ## Hello

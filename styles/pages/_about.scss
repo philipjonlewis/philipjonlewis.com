@@ -1,0 +1,46 @@
+@mixin common-stack-container {
+  @apply px-4 md:p-0 md:pl-4 md:w-fit md:pr-12 md:border-r-[1px];
+}
+
+.stack-container {
+  @include common-stack-container;
+}
+
+.cv-container {
+  @apply px-4 md:p-0 md:pl-4 md:pr-4 md:w-fit md:border-r-[1px];
+
+  .cv-download-container {
+    p:first-of-type {
+      text-align: center;
+    }
+    .dl-list-container {
+      @apply flex flex-col justify-center items-center;
+
+      .cv-container {
+        @apply flex
+         justify-center
+          items-center
+          px-4
+          py-2
+          mb-4
+     
+          bg-slate-100  
+          hover:bg-sky-50
+          dark:text-neutral-800
+          rounded-lg
+          hover:shadow-md
+          cursor-pointer
+          transition
+          hover:-translate-y-0.5;
+
+        p {
+          @apply text-sm mr-2;
+        }
+
+        svg {
+          height: 1.2rem;
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,8 @@ import { annotate, annotationGroup } from "rough-notation";
 
 import TechStack from "../../components/pageComponents/about/TechStack";
 import DesignStack from "../../components/pageComponents/about/DesignStack";
-import { ExternalLinkIcon } from "@heroicons/react/solid";
+import { ExternalLinkIcon, DownloadIcon } from "@heroicons/react/solid";
+import DownloadCV from "../../components/pageComponents/about/DownloadCV";
 const About: NextPage = () => {
   const segment = {
     visible: { opacity: 1, x: 0 },
@@ -64,17 +65,17 @@ const About: NextPage = () => {
               pragmatic
             </span>{" "}
             right from the beginning up to the execution and documentation of
-            any project.
+            any project that I am involved with.
           </p>
 
           <br />
 
           <p>
             My primary tech stack is MERN (MongoDB,Express,React & Node with
-            typescript. I mainly work within the javascript ecosystem but as a
-            self-taught developer, should the need to learn and use additional
-            languages and/or technologies arise, I wouldn&apos;t hesitate to
-            take on that challenge.
+            typescript. I mainly work within the typescript/javascript ecosystem
+            but as a self-taught developer, should the need to learn and use
+            additional languages and/or technologies arise, I wouldn&apos;t
+            hesitate to take on that challenge.
           </p>
 
           <br />
@@ -85,17 +86,17 @@ const About: NextPage = () => {
           </p>
           <br />
           <p>
-            I&#39;m currently building two apps.{" "}
+            It would be best to judge me as a developer through my projects:{" "}
             <span className="text-orange-700 dark:text-blue-500 inline-block">
-              <a href="https://www.taptaptask.com">taptaptask</a>
+              <a href="https://www.taptaptask.com">TapTapTask</a>
               <ExternalLinkIcon className="h-4 w-4 ml-1 inline-block " />
             </span>
             , a phase-based project &#x26; task management app and{" "}
             <span className="text-orange-700 dark:text-blue-500 inline-block">
-              <a href="https://www.archestimator.com">archestimator</a>
+              <a href="https://quicknotesbyphilip.netlify.app/">QuickNotes</a>
               <ExternalLinkIcon className="h-4 w-4 ml-1 inline-block " />
             </span>
-            , a cost estimator for architects.
+            , a minimalist block style editor.
           </p>
         </div>
       </motion.div>
@@ -105,7 +106,7 @@ const About: NextPage = () => {
         animate="visible"
         transition={{ delay: 0.6 }}
         variants={segment}
-        className="px-4 md:p-0 md:pl-4 md:w-fit md:pr-12 md:border-r-[1px]"
+        className="stack-container"
       >
         <TechStack />
       </motion.div>
@@ -114,9 +115,18 @@ const About: NextPage = () => {
         animate="visible"
         transition={{ delay: 0.9 }}
         variants={segment}
-        className="px-4 md:p-0 md:pl-4 md:w-fit md:pr-12 md:border-r-[1px]"
+        className="stack-container"
       >
         <DesignStack />
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        transition={{ delay: 1.2 }}
+        variants={segment}
+        className="cv-container"
+      >
+        <DownloadCV />
       </motion.div>
     </div>
   );
