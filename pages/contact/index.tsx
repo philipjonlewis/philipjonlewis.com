@@ -101,7 +101,7 @@ const Contact: NextPage = () => {
             Slide <ArrowRightIcon />
           </span>
           <p className="notice">to reveal contact details</p>
-          <p className="notice">(it's an anti-spam feature)</p>
+          <p className="notice">(it&apos;s an anti-spam feature)</p>
         </div>
       )}
     </motion.div>

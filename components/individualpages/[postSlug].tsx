@@ -6,7 +6,7 @@ import matter from "gray-matter";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
-import SwiperSlider from "../../../components/carousel/SwiperSlider";
+import SwiperSlider from "../carousel/SwiperSlider";
 import { ArrowLeftIcon } from "@heroicons/react/outline";
 const SoftwarePost = ({
   frontMatter: {

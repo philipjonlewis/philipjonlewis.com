@@ -3,39 +3,44 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Image from "next/image";
-import SwiperSlider from "../../../components/carousel/SwiperSlider";
+import SwiperSlider from "../carousel/SwiperSlider";
 const ArchitecturePage = ({
-  brandingId,
-  frontMatter: { projectName, imageLink },
+  architectureId,
+  frontMatter: { projectName, location },
   content,
 }) => {
-  // console.log(brandingId);
+  // console.log(architectureId);
   return (
     <div className="architecture-page">
       <div className="slider-container">
         {" "}
-        <SwiperSlider imageList={[imageLink]} />
+        <SwiperSlider
+          imageList={[
+            "/images/projects/architecture/thumbnails/" +
+              architectureId +
+              ".jpg",
+          ]}
+        />
       </div>
+
       <div className="content-container">
         <p>Project Name : {projectName}</p>
-        {/* <p>Location : {location}</p> */}
+        <p>Location : {location}</p>
       </div>
     </div>
   );
-
-  return <p>Hello</p>;
 };
 
 export default ArchitecturePage;
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("db/projects/branding"));
+  const files = fs.readdirSync(path.join("db/projects/architecture"));
 
   const paths = files.map((fileName) => {
     const slug = fileName.replace(".md", "");
 
     return {
-      params: { brandingId: slug.toString() },
+      params: { architectureId: slug.toString() },
     };
   });
 
@@ -45,15 +50,17 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { brandingId } }) {
+export async function getStaticProps({ params: { architectureId } }) {
   const markdownWithMeta = fs.readFileSync(
-    path.join("db/projects/branding", brandingId + ".md"),
+    path.join("db/projects/architecture", architectureId + ".md"),
     "utf-8"
   );
+
+  console.log("what", gifPaths);
 
   const { data: frontMatter, content } = matter(markdownWithMeta);
 
   return {
-    props: { brandingId, frontMatter, content },
+    props: { architectureId, frontMatter, content },
   };
 }
