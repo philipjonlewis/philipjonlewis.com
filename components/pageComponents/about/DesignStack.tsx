@@ -10,7 +10,7 @@ const DesignStack = () => {
       {/* tech stack container */}
       <div className="tech-stack ">
         {/* Primary Tech Stack */}
-        <div className="primary mb-4  md:pb-2">
+        <div className="primary mb-4 pb-2 border-b-[1px] md:border-none">
           <p className="text-base font-semibold mb-2 text-slate-500 dark:text-slate-300 ">
             Misc
           </p>
