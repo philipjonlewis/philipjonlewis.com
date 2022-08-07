@@ -33,11 +33,11 @@ const SwiperSlider = ({ imageList }) => {
               objectPosition={"top"}
               alt="image"
             />
-            {/* 
+
             <div className="description-container">
               <p>{imageDescription.title}</p>
               <p>{imageDescription.desc}</p>
-            </div> */}
+            </div>
             {/* </div> */}
           </SwiperSlide>
         );
