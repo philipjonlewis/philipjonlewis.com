@@ -20,7 +20,7 @@ const About: NextPage = () => {
         animate="visible"
         transition={{ delay: 0.3 }}
         variants={segment}
-        className="px-4 md:p-0 md:w-1/3 md:border-r-[1px] md:pr-4 mb-4 border-b-[1px] md:border-none"
+        className="px-4 md:p-0 md:w-1/3 md:border-r-[1px] md:pr-4 mb-4 border-b-[1px] "
       >
         <div className="text-2xl font-bold mb-4 text-slate-600 dark:text-slate-200">
           <p>About Me</p>
