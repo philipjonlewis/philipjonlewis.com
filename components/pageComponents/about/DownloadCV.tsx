@@ -1,5 +1,6 @@
 import React from "react";
 import { DownloadIcon } from "@heroicons/react/solid";
+import { toast } from "react-toastify";
 const DownloadCV = () => {
   return (
     <div className="cv-download-container">
@@ -7,15 +8,46 @@ const DownloadCV = () => {
         <p>Downloads</p>
       </div>
       <div className="dl-list-container">
-        <div className="cv-container">
-          <p>Resume</p>
-          <DownloadIcon />
-        </div>
-
-        <div className="cv-container">
-          <p>Curriculum Vitae</p>
-          <DownloadIcon />
-        </div>
+        <a
+          href="/pdf/RESUME-LEWIS_PHILIP_JON_E.pdf"
+          download
+          onClick={() => {
+            toast.info("Thanks for downloading my resume!", {
+              position: "top-center",
+              autoClose: 10000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            });
+          }}
+        >
+          <div className="cv-container">
+            <p>Resume</p>
+            <DownloadIcon />
+          </div>
+        </a>
+        <a
+          href="/pdf/CV-LEWIS_PHILIP_JON_E.pdf"
+          download
+          onClick={() => {
+            toast.info("Thank you for downloading my CV!", {
+              position: "top-center",
+              autoClose: 10000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            });
+          }}
+        >
+          <div className="cv-container">
+            <p>Curriculum Vitae</p>
+            <DownloadIcon />
+          </div>
+        </a>
       </div>
     </div>
   );
