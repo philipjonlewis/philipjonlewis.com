@@ -3,7 +3,8 @@ projectId: 4
 projectName: "Archestimator"
 projectDescription: "An architectural cost estimator for architects & interior designers"
 techStack: ["Typescript", "Svelte", "Vite", "Css + Sass", "Rollup", "Supabase"]
-siteLink: "https://www.archestimator.com"
+siteLink: "https://archestimator.netlify.app"
+# siteLink: "https://www.archestimator.com"
 imageLink: "/images/projects/fullstack/archestimator.png"
 gitHubLinks:
   [
