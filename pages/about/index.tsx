@@ -81,8 +81,9 @@ const About: NextPage = () => {
           <br />
 
           <p>
-            I&apos;m interested in pursuing mobile app development & information
-            security in the near future
+            I&apos;m currently self-studying advanced coding topics (algorithms
+            and data structures) and am very interested in pursuing blockchain
+            and mobile app development in the near future
           </p>
           <br />
           <p>
