@@ -99,7 +99,7 @@ const Home: NextPage = () => {
           <p className="text-xl md:text-3xl font-sans font-semibold">
             I&#39;m an <span ref={myArchitect}>Architect</span>, a{" "}
             <span ref={myDesigner}>Designer</span>, and a{" "}
-            <span ref={myEngineer}>Developer</span>
+            <span ref={myEngineer}>Software Engineer</span>
             <br /> focused on{" "}
             <span ref={productDesign}>product design & development</span>
           </p>

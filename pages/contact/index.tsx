@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
-import type { NextPage } from "next";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import {
   HomeIcon,
   ArrowRightIcon,
   MailOpenIcon,
   ClipboardCopyIcon,
-} from "@heroicons/react/outline";
-import { toast } from "react-toastify";
+} from '@heroicons/react/outline';
+import { toast } from 'react-toastify';
 
 const Contact: NextPage = () => {
   // const [motionVaue, setMotionValue] = useState(0);
   const [isContactRevealed, setIsContactRevealed] = useState(false);
   let x = useMotionValue(0);
-  const background = useTransform(x, [0, 200], ["#f8fafc", "#bef264"]);
+  const background = useTransform(x, [0, 200], ['#f8fafc', '#bef264']);
 
   // useEffect(() => {
   //   console.log(x);
@@ -21,15 +21,6 @@ const Contact: NextPage = () => {
 
   return (
     <motion.div className="contact-page-container">
-      {/* {!isContactRevealed && (
-        <div className="contact-details-container">
-          <span className="slide-text-container">
-            Slide <ArrowRightIcon />
-          </span>
-          <p className="notice">to show contact details</p>
-        </div>
-      )} */}
-
       <motion.div className="drag-container" style={{ background }}>
         <motion.div
           drag="x"
@@ -60,9 +51,9 @@ const Contact: NextPage = () => {
             <div
               className="copy"
               onClick={() => {
-                navigator.clipboard.writeText("philipjonlewis@gmail.com");
-                toast.info("Email copied to your clipboard", {
-                  position: "top-center",
+                navigator.clipboard.writeText('philipjonlewis@gmail.com');
+                toast.info('Email copied to your clipboard', {
+                  position: 'top-center',
                   autoClose: 10000,
                   hideProgressBar: false,
                   closeOnClick: true,
@@ -79,8 +70,8 @@ const Contact: NextPage = () => {
               href="mailto:philipjonlewis@gmail.com"
               className="email"
               onClick={() => {
-                toast.info("Opening your email app", {
-                  position: "top-center",
+                toast.info('Opening your email app', {
+                  position: 'top-center',
                   autoClose: 10000,
                   hideProgressBar: false,
                   closeOnClick: true,
