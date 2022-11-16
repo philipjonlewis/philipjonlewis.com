@@ -28,7 +28,7 @@ const DownloadCV = () => {
             <DownloadIcon />
           </div>
         </a>
-        <a
+        {/* <a
           href="/pdf/CV-LEWIS_PHILIP_JON_E.pdf"
           download
           onClick={() => {
@@ -47,7 +47,7 @@ const DownloadCV = () => {
             <p>Curriculum Vitae</p>
             <DownloadIcon />
           </div>
-        </a>
+        </a> */}
       </div>
     </div>
   );
