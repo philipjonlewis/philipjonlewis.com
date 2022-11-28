@@ -1,10 +1,10 @@
-import "../styles/styles.scss";
-import type { AppProps } from "next/app";
-import Layout from "../components/layouts/Layout";
-import { ThemeProvider } from "next-themes";
-import { AnimatePresence, motion } from "framer-motion";
-import { useRouter } from "next/router";
-import { ProjectNavbar } from "../components/navigation/ProjectNavbar";
+import { Analytics } from '@vercel/analytics/react';
+import { AnimatePresence } from 'framer-motion';
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import Layout from '../components/layouts/Layout';
+import { ProjectNavbar } from '../components/navigation/ProjectNavbar';
+import '../styles/styles.scss';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const { pathname } = useRouter();
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   // console.log(pathname);
   return (
     <Layout>
-      {pathname.includes("/projects") && <ProjectNavbar />}
+      {pathname.includes('/projects') && <ProjectNavbar />}
       <AnimatePresence exitBeforeEnter initial={false}>
         {/* <motion.main
           key={router.route}
@@ -28,6 +28,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         > */}
         <Component {...pageProps} />
         {/* </motion.main> */}
+        <Analytics />
       </AnimatePresence>
     </Layout>
   );

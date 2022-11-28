@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
+    "@vercel/analytics": "^0.1.5",
     "framer-motion": "^6.5.1",
     "gltf-pipeline": "^3.0.5",
     "gray-matter": "^4.0.3",
