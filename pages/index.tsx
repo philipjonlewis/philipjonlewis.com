@@ -1,10 +1,10 @@
-import { useEffect, useRef } from "react";
-import type { NextPage } from "next";
-import { annotate, annotationGroup } from "rough-notation";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { ExternalLinkIcon, ArrowRightIcon } from "@heroicons/react/solid";
-import dynamic from "next/dynamic";
+import { useEffect, useRef } from 'react';
+import type { NextPage } from 'next';
+import { annotate, annotationGroup } from 'rough-notation';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { ExternalLinkIcon, ArrowRightIcon } from '@heroicons/react/solid';
+import dynamic from 'next/dynamic';
 
 // const ComputerModel = dynamic(dynamicOptions: () => import "../components/3D/ThreeJsModel")
 
@@ -25,47 +25,47 @@ const Home: NextPage = () => {
     //   strokeWidth: 1,
     // });
     const a2 = annotate(myArchitect.current, {
-      type: "bracket",
-      brackets: ["left", "right"],
+      type: 'bracket',
+      brackets: ['left', 'right'],
       // padding: 1,
       // color: "green",
       strokeWidth: 1,
     });
     const a3 = annotate(myDesigner.current, {
-      type: "circle",
+      type: 'circle',
       // padding: 5,
       // color: "yellow",
       strokeWidth: 1,
     });
     const a4 = annotate(myEngineer.current, {
-      type: "box",
+      type: 'box',
       // color: "blue",
       strokeWidth: 1,
     });
     const a5 = annotate(openPosition.current, {
-      type: "highlight",
+      type: 'highlight',
       // type: "bracket",
       // brackets: ["left", "right"],
       // padding: 1,
-      color: "darkorange",
+      color: 'darkorange',
       strokeWidth: 1,
     });
     const a6 = annotate(productDesign.current, {
-      type: "underline",
+      type: 'underline',
       // brackets: ["left", "right"],
       // padding: 1,
       // color: "green",
       strokeWidth: 1,
     });
     const a7 = annotate(myName.current, {
-      type: "bracket",
-      brackets: ["top", "bottom"],
+      type: 'bracket',
+      brackets: ['top', 'bottom'],
       padding: 2,
       // color: "green",
       strokeWidth: 1,
     });
     const a8 = annotate(circleButton.current, {
-      type: "circle",
+      type: 'circle',
       // brackets: ["left", "right"],
       padding: 20,
       // color: "green",
@@ -97,10 +97,10 @@ const Home: NextPage = () => {
       >
         <div className="mb-4">
           <p className="text-xl md:text-3xl font-sans font-semibold">
-            I&#39;m an <span ref={myArchitect}>Architect</span>, a{" "}
-            <span ref={myDesigner}>Designer</span>, and a{" "}
+            I&#39;m an <span ref={myArchitect}>Architect</span>, a{' '}
+            <span ref={myDesigner}>Designer</span>, and a{' '}
             <span ref={myEngineer}>Software Engineer</span>
-            <br /> focused on{" "}
+            <br /> focused on{' '}
             <span ref={productDesign}>product design & development</span>
           </p>
         </div>
@@ -125,8 +125,7 @@ const Home: NextPage = () => {
             className="text-sm font-semibold dark:text-slate-50"
             ref={openPosition}
           >
-            I&#39;m currently looking for a front-end and/or back-end
-            development/engineering position.
+            I&#39;m currently looking for a position in tech.
           </p>
         </div>
         <div
