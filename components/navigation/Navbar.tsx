@@ -1,10 +1,15 @@
-import React, { useEffect } from "react";
-import Link from "next/link";
+import React, { useEffect } from 'react';
+import Link from 'next/link';
 
-import { useRouter } from "next/router";
-import { motion } from "framer-motion";
+import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
-import { GitHubIcon, LinkedInIcon, TwitterIcon } from "../branding";
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  TwitterIcon,
+  BehanceIcon,
+} from '../branding';
 
 const Navbar = () => {
   const router = useRouter();
@@ -24,14 +29,14 @@ const Navbar = () => {
     visible: {
       opacity: 1,
       transition: {
-        when: "beforeChildren",
+        when: 'beforeChildren',
         staggerChildren: 0.1,
       },
     },
     hidden: {
       opacity: 0,
       transition: {
-        when: "afterChildren",
+        when: 'afterChildren',
       },
     },
   };
@@ -78,6 +83,15 @@ const Navbar = () => {
           >
             <TwitterIcon />
           </motion.a>
+          <motion.a
+            variants={item}
+            target="_blank"
+            href="https://www.behance.net/__jonlewis"
+            className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
+            rel="noreferrer"
+          >
+            <BehanceIcon />
+          </motion.a>
         </motion.div>
 
         <motion.div
@@ -89,7 +103,7 @@ const Navbar = () => {
           <Link href="/">
             <motion.a
               variants={item}
-              className={router.pathname == "/" ? "active-navlink" : "nav-link"}
+              className={router.pathname == '/' ? 'active-navlink' : 'nav-link'}
             >
               Home
             </motion.a>
@@ -99,9 +113,9 @@ const Navbar = () => {
             <motion.a
               variants={item}
               className={
-                router.pathname.includes("/about")
-                  ? "active-navlink"
-                  : "nav-link"
+                router.pathname.includes('/about')
+                  ? 'active-navlink'
+                  : 'nav-link'
               }
             >
               About
@@ -125,9 +139,9 @@ const Navbar = () => {
             <motion.a
               variants={item}
               className={
-                router.pathname.includes("/projects")
-                  ? "active-navlink"
-                  : "nav-link"
+                router.pathname.includes('/projects')
+                  ? 'active-navlink'
+                  : 'nav-link'
               }
             >
               Projects
@@ -138,9 +152,9 @@ const Navbar = () => {
             <motion.a
               variants={item}
               className={
-                router.pathname.includes("/contact")
-                  ? "active-navlink"
-                  : "nav-link"
+                router.pathname.includes('/contact')
+                  ? 'active-navlink'
+                  : 'nav-link'
               }
             >
               Contact

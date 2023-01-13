@@ -125,7 +125,7 @@ const Home: NextPage = () => {
             className="text-sm font-semibold dark:text-slate-50"
             ref={openPosition}
           >
-            I&#39;m currently looking for a position in tech.
+            I&#39;m currently open for work!
           </p>
         </div>
         <div

@@ -1,6 +1,6 @@
-import React from "react";
-import { DownloadIcon } from "@heroicons/react/solid";
-import { toast } from "react-toastify";
+import React from 'react';
+import { DownloadIcon } from '@heroicons/react/solid';
+import { toast } from 'react-toastify';
 const DownloadCV = () => {
   return (
     <div className="cv-download-container">
@@ -9,11 +9,11 @@ const DownloadCV = () => {
       </div>
       <div className="dl-list-container">
         <a
-          href="/pdf/RESUME-LEWIS_PHILIP_JON_E.pdf"
+          href="/pdf/Lewis_Philip Jon E-Resume.pdf"
           download
           onClick={() => {
-            toast.info("Thanks for downloading my resume!", {
-              position: "top-center",
+            toast.info('Thanks for downloading my resume!', {
+              position: 'top-center',
               autoClose: 10000,
               hideProgressBar: false,
               closeOnClick: true,

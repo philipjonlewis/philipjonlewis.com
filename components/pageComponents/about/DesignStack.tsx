@@ -1,5 +1,5 @@
-import React from "react";
-import { ChevronRightIcon } from "@heroicons/react/solid";
+import React from 'react';
+import { ChevronRightIcon } from '@heroicons/react/solid';
 
 const DesignStack = () => {
   return (
@@ -43,7 +43,8 @@ const DesignStack = () => {
                 Project Management
               </li>
               <ul className="ml-2">
-                <li>&#8250; asana</li>
+                <li>&#8250; Asana</li>
+                <li>&#8250; Notion</li>
               </ul>
               <li className="text-sm font-normal mt-2 text-sky-600 dark:text-orange-300">
                 Architecture

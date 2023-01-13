@@ -1,3 +1,3 @@
-import { GitHubIcon, LinkedInIcon, TwitterIcon } from "./SvgIcons";
+import { GitHubIcon, LinkedInIcon, TwitterIcon, BehanceIcon } from './SvgIcons';
 
-export { GitHubIcon, LinkedInIcon, TwitterIcon };
+export { GitHubIcon, LinkedInIcon, TwitterIcon, BehanceIcon };

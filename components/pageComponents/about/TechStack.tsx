@@ -1,5 +1,5 @@
-import React from "react";
-import { ChevronRightIcon } from "@heroicons/react/solid";
+import React from 'react';
+import { ChevronRightIcon } from '@heroicons/react/solid';
 
 const TechStack = () => {
   return (
@@ -69,6 +69,7 @@ const TechStack = () => {
                 Compilers, Bundlers, etc.
               </li>
               <ul className="ml-2">
+                <li>&#8250; Docker</li>
                 <li>&#8250; Firebase</li>
                 <li>&#8250; Vite</li>
                 <li>&#8250; Webpack</li>

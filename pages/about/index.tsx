@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from "react";
-import type { NextPage } from "next";
-import { motion } from "framer-motion";
-import { annotate, annotationGroup } from "rough-notation";
+import React, { useRef, useEffect } from 'react';
+import type { NextPage } from 'next';
+import { motion } from 'framer-motion';
+import { annotate, annotationGroup } from 'rough-notation';
 
-import TechStack from "../../components/pageComponents/about/TechStack";
-import DesignStack from "../../components/pageComponents/about/DesignStack";
-import { ExternalLinkIcon, DownloadIcon } from "@heroicons/react/solid";
-import DownloadCV from "../../components/pageComponents/about/DownloadCV";
+import TechStack from '../../components/pageComponents/about/TechStack';
+import DesignStack from '../../components/pageComponents/about/DesignStack';
+import { ExternalLinkIcon, DownloadIcon } from '@heroicons/react/solid';
+import DownloadCV from '../../components/pageComponents/about/DownloadCV';
 const About: NextPage = () => {
   const segment = {
     visible: { opacity: 1, x: 0 },
@@ -27,7 +27,7 @@ const About: NextPage = () => {
         </div>
         <div className="text-sm mb-4 ">
           <p>
-            Hello 👋, <br /> My name is{" "}
+            Hello 👋, <br /> My name is{' '}
             <span className="font-semibold text-lime-600 dark:text-lime-500">
               Philip Lewis
             </span>
@@ -35,70 +35,66 @@ const About: NextPage = () => {
           </p>
           <br />
           <p>
-            I&#39;m an architect, a designer and a{" "}
-            <span className="font-semibold text-amber-600 dark:text-amber-500">
-              self-taught software developer
+            I&#39;m a highly skilled and driven architect, a designer and a{' '}
+            <span className="font-semibold text-amber-600 dark:text-amber-500 pr-1">
+              self-taught developer
             </span>
-            . I&#39;m motivated by meaningful challenges and inspired by
-            building technology that helps people.
+            With over six years of experience in the Architecture, Engineering
+            and Construction (AEC) industry, I have honed my ability to analyze
+            and solve complex problems.
           </p>
           <br />
           <p>
-            Prior to shifting careers into tech, completed projects under my
-            architectural practice range from commercial, office interiors,
-            residential &#x26; planning projects. Services provided were from,
-            but not limited to, architectural design to project management.
+            My proficiency in software engineering has enabled me to build
+            front-end and back-end software with technical competence.
           </p>
           <br />
-
           <p>
-            I have built myself to be a{" "}
+            {' '}
+            As a licensed architect, I have effectively managed the design and
+            production of multiple projects, excelling in client presentations
+            and coordination with engineers and suppliers.
+          </p>
+          <br />
+          <p>
+            My primary tech stack is MERN (MongoDB, Express, React, and Node
+            with TypeScript) and I am comfortable working within the
+            TypeScript/JavaScript ecosystem. I am always eager to further my
+            growth as a multi-disciplinary developer and team player, and I am
+            currently self-studying advanced coding topics and exploring
+            blockchain and mobile app development. If you&apos;re looking for a
+            dedicated and talented developer, look no further than me.
+          </p>
+          <br />
+          <p>
+            Through my experience and dedication, I have developed a strong
+            skill set in team collaboration and{' '}
             <span className="font-semibold text-emerald-600 dark:text-emerald-500">
-              strategic team player
-            </span>{" "}
-            and an{" "}
-            <span className="font-semibold text-purple-700 dark:text-purple-500">
-              organized leader. <br />
-            </span>{" "}
-            I take pride in being{" "}
-            <span className="font-semibold text-cyan-700 dark:text-cyan-400">
-              pragmatic
-            </span>{" "}
-            right from the beginning up to the execution and documentation of
-            any project that I am involved with.
-          </p>
-
-          <br />
-
-          <p>
-            My primary tech stack is MERN (MongoDB,Express,React & Node with
-            typescript. I mainly work within the typescript/javascript ecosystem
-            but as a self-taught developer, should the need to learn and use
-            additional languages and/or technologies arise, I wouldn&apos;t
-            hesitate to take on that challenge.
-          </p>
-
-          <br />
-
-          <p>
-            I&apos;m currently self-studying advanced coding topics (algorithms
-            and data structures) and am very interested in pursuing blockchain
-            and mobile app development in the near future
+              project management.
+            </span>{' '}
+            I approach each project with a{' '}
+            <span className="font-semibold text-purple-600 dark:text-purple-500">
+              strategic mindset
+            </span>{' '}
+            and a focus on organization and efficiency.
           </p>
           <br />
           <p>
-            It would be best to judge me as a developer through my projects:{" "}
-            <span className="text-orange-700 dark:text-blue-500 inline-block">
-              <a href="https://www.taptaptask.com">TapTapTask</a>
-              <ExternalLinkIcon className="h-4 w-4 ml-1 inline-block " />
-            </span>
-            , a phase-based project &#x26; task management app and{" "}
-            <span className="text-orange-700 dark:text-blue-500 inline-block">
-              <a href="https://quicknotesbyphilip.netlify.app/">QuickNotes</a>
-              <ExternalLinkIcon className="h-4 w-4 ml-1 inline-block " />
-            </span>
-            , a minimalist block style editor.
+            My innate ability to be{' '}
+            <span className="font-semibold text-cyan-600 dark:text-cyan-500">
+              pragmatic and methodical
+            </span>{' '}
+            , from the initial planning stages to successful execution and
+            documentation, allows me to consistently deliver high-quality
+            results.
           </p>
+          <br />
+          <p>
+            I take pride in my ability to lead and be an effective team player,
+            making sure that every project I am involved in runs smoothly and
+            successfully.
+          </p>
+          <br />
         </div>
       </motion.div>
 
