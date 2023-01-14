@@ -9,7 +9,7 @@ const DownloadCV = () => {
       </div>
       <div className="dl-list-container">
         <a
-          href="/pdf/Lewis_Philip Jon E-Resume.pdf"
+          href="/pdf/Lewis_Philip-Jon-E-Resume.pdf"
           download
           onClick={() => {
             toast.info('Thanks for downloading my resume!', {
