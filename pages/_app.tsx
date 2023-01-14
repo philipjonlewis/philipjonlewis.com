@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <Layout>
       {pathname.includes('/projects') && <ProjectNavbar />}
-      <AnimatePresence exitBeforeEnter initial={false}>
+      <AnimatePresence mode={'wait'} initial={false}>
         {/* <motion.main
           key={router.route}
           variants={variants} // Pass the variant object into Framer Motion

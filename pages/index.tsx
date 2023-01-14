@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   const myArchitect = useRef() as any;
   const myDesigner = useRef() as any;
   const myEngineer = useRef() as any;
-  const productDesign = useRef();
+  // const productDesign = useRef();
   const openPosition = useRef() as any;
   const circleButton = useRef() as any;
 
@@ -50,15 +50,15 @@ const Home: NextPage = () => {
       color: 'darkorange',
       strokeWidth: 1,
     });
-    const a6 = annotate(productDesign.current, {
-      type: 'underline',
-      // brackets: ["left", "right"],
-      // padding: 1,
-      // color: "green",
-      strokeWidth: 1,
-    });
+    // const a6 = annotate(productDesign.current, {
+    //   type: 'underline',
+    //   // brackets: ["left", "right"],
+    //   // padding: 1,
+    //   // color: "green",
+    //   strokeWidth: 1,
+    // });
     const a7 = annotate(myName.current, {
-      type: 'bracket',
+      type: 'underline',
       brackets: ['top', 'bottom'],
       padding: 2,
       // color: "green",
@@ -72,7 +72,14 @@ const Home: NextPage = () => {
       strokeWidth: 1,
     });
 
-    const ag = annotationGroup([a2, a3, a4, a6, a7, a5]);
+    const ag = annotationGroup([
+      a2,
+      a3,
+      a4,
+      // a6,
+      a7,
+      a5,
+    ]);
     // const ag = annotationGroup([a8]);
 
     setTimeout(() => {
@@ -100,8 +107,8 @@ const Home: NextPage = () => {
             I&#39;m an <span ref={myArchitect}>Architect</span>, a{' '}
             <span ref={myDesigner}>Designer</span>, and a{' '}
             <span ref={myEngineer}>Software Engineer</span>
-            <br /> focused on{' '}
-            <span ref={productDesign}>product design & development</span>
+            {/* <br /> focused on{' '}
+            <span ref={productDesign}>product design & development</span> */}
           </p>
         </div>
 
