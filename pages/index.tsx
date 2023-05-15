@@ -125,9 +125,15 @@ const Home: NextPage = () => {
             className='text-sm font-semibold dark:text-slate-50'
             ref={openPosition}
           >
+            Website under construction. Please check back soon!
+          </p>
+          {/* <p
+            className='text-sm font-semibold dark:text-slate-50'
+            ref={openPosition}
+          >
             I&#39;m currently looking for a front-end and/or back-end
             development/engineering position.
-          </p>
+          </p> */}
         </div>
         <div
           ref={circleButton}
