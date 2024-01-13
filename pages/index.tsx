@@ -64,13 +64,13 @@ const Home: NextPage = () => {
       // color: "green",
       strokeWidth: 1,
     })
-    const a8 = annotate(circleButton.current, {
-      type: 'circle',
-      // brackets: ["left", "right"],
-      padding: 20,
-      // color: "green",
-      strokeWidth: 1,
-    })
+    // const a8 = annotate(circleButton.current, {
+    //   type: 'circle',
+    //   // brackets: ["left", "right"],
+    //   padding: 20,
+    //   // color: "green",
+    //   strokeWidth: 1,
+    // })
 
     const ag = annotationGroup([a2, a3, a4, a6, a7, a5])
     // const ag = annotationGroup([a8]);
@@ -135,7 +135,7 @@ const Home: NextPage = () => {
             development/engineering position.
           </p> */}
         </div>
-        <div
+        {/* <div
           ref={circleButton}
           className='ml-auto sm:ml-0 w-fit py-4 px-8 text-sm h-12 flex justify-center items-center   rounded-md cursor-pointer border
          border-slate-800 
@@ -156,12 +156,11 @@ const Home: NextPage = () => {
        
          
          '
-        >
-          <Link href='/contact' className='font-semibold'>
+        > */}
+        {/* <Link href='/contact' className='font-semibold'>
             Let&apos;s Talk!
-          </Link>
-          {/* <p className="font-semibold">Let&apos;s Work Together!</p> */}
-        </div>
+          </Link> */}
+        {/* </div> */}
       </motion.div>
     </div>
   )
