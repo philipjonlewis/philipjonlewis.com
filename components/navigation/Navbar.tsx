@@ -1,19 +1,14 @@
-import React, { useEffect } from 'react';
-import Link from 'next/link';
+import React, { useEffect } from 'react'
+import Link from 'next/link'
 
-import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
+import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
 
-import {
-  GitHubIcon,
-  LinkedInIcon,
-  TwitterIcon,
-  BehanceIcon,
-} from '../branding';
+import { GitHubIcon, LinkedInIcon, TwitterIcon, BehanceIcon } from '../branding'
 
 const Navbar = () => {
-  const router = useRouter();
-  const { asPath } = useRouter();
+  const router = useRouter()
+  const { asPath } = useRouter()
   // const logoReference = useRef() as any;
 
   useEffect(() => {
@@ -22,7 +17,7 @@ const Navbar = () => {
     //   color: "red",
     // });
     // logo.show();
-  }, []);
+  }, [])
   // console.log(router.pathname);
 
   const list = {
@@ -39,68 +34,68 @@ const Navbar = () => {
         when: 'afterChildren',
       },
     },
-  };
+  }
 
   const item = {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: -100 },
-  };
+  }
 
   return (
-    <nav className="h-12">
-      <div className="h-full container flex justify-between items-center">
+    <nav className='h-12'>
+      <div className='h-full container flex justify-between items-center'>
         <motion.div
-          initial="hidden"
-          animate="visible"
+          initial='hidden'
+          animate='visible'
           variants={list}
-          className="flex px-4 md:px-0"
+          className='flex px-4 md:px-0'
         >
           <motion.a
             variants={item}
-            target="_blank"
-            href="https://github.com/philipjonlewis"
-            className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
-            rel="noreferrer"
+            target='_blank'
+            href='https://github.com/philipjonlewis'
+            className='mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer'
+            rel='noreferrer'
           >
             <GitHubIcon />
           </motion.a>
 
           <motion.a
             variants={item}
-            target="_blank"
-            href="https://www.linkedin.com/in/philipjonlewis/"
-            className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
-            rel="noreferrer"
+            target='_blank'
+            href='https://www.linkedin.com/in/philipjonlewis/'
+            className='mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer'
+            rel='noreferrer'
           >
             <LinkedInIcon />
           </motion.a>
           <motion.a
             variants={item}
-            target="_blank"
-            href="https://twitter.com/__jonlewis"
-            className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
-            rel="noreferrer"
+            target='_blank'
+            href='https://twitter.com/__jonlewis'
+            className='mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer'
+            rel='noreferrer'
           >
             <TwitterIcon />
           </motion.a>
           <motion.a
             variants={item}
-            target="_blank"
-            href="https://www.behance.net/__jonlewis"
-            className="mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer"
-            rel="noreferrer"
+            target='_blank'
+            href='https://www.behance.net/__jonlewis'
+            className='mr-8 hover:text-orange-500 dark:hover:text-blue-500 cursor-pointer'
+            rel='noreferrer'
           >
             <BehanceIcon />
           </motion.a>
         </motion.div>
 
         <motion.div
-          className="hidden md:flex"
-          initial="hidden"
-          animate="visible"
+          className='hidden md:flex'
+          initial='hidden'
+          animate='visible'
           variants={list}
         >
-          <Link href="/">
+          <Link href='/'>
             <motion.a
               variants={item}
               className={router.pathname == '/' ? 'active-navlink' : 'nav-link'}
@@ -109,7 +104,7 @@ const Navbar = () => {
             </motion.a>
           </Link>
 
-          <Link href="/about">
+          {/* <Link href="/about">
             <motion.a
               variants={item}
               className={
@@ -120,7 +115,7 @@ const Navbar = () => {
             >
               About
             </motion.a>
-          </Link>
+          </Link> */}
 
           {/* <Link href="/articles">
             <motion.a
@@ -135,7 +130,7 @@ const Navbar = () => {
             </motion.a>
           </Link> */}
 
-          <Link href="/projects">
+          {/* <Link href="/projects">
             <motion.a
               variants={item}
               className={
@@ -146,9 +141,9 @@ const Navbar = () => {
             >
               Projects
             </motion.a>
-          </Link>
+          </Link> */}
 
-          <Link href="/contact">
+          <Link href='/contact'>
             <motion.a
               variants={item}
               className={
@@ -171,7 +166,7 @@ const Navbar = () => {
         </motion.div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

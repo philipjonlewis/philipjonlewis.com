@@ -106,19 +106,19 @@ const Home: NextPage = () => {
         </div>
 
         <div className='mb-4'>
-          <span className='text-sm md:text-md font-semibold'>
+          <span className='text-xs md:text-md font-semibold'>
             My name is <span ref={myName}>Philip Lewis</span> and I love
             challenges and building great things.
           </span>
         </div>
-        <div className='mb-12 flex justify-center items-center h-6 w-fit text-xs cursor-pointer text-orange-700 dark:text-blue-500'>
+        {/* <div className='mb-12 flex justify-center items-center h-6 w-fit text-xs cursor-pointer text-orange-700 dark:text-blue-500'>
           <Link href='/about'>
             <div className='flex justify-center items-center'>
               <p>Read more about me</p>
               <ArrowRightIcon className='h-4 w-4 ml-2 text-orange-700 dark:text-blue-500' />
             </div>
           </Link>
-        </div>
+        </div> */}
 
         <div className='mb-12 md:mb-6 w-fit'>
           <p
